@@ -9,7 +9,7 @@
 </div>
 <div class='background-page' id="holu" style ="background-color: orange">
 	<div class="content-container">
-	<h1> SOY OTRO SLIDE </h1>
+	<h1 id="otro-slide"> SOY OTRO SLIDE </h1>
 	</div>
 </div>
 <div class='background-page' style ="background-color: black">
@@ -30,5 +30,8 @@
 	    $('html, body').animate({
 	        scrollTop: $("#holu").offset().top
 	    }, 1000);
+	    $('#otro-slide').animate({
+	        fontSize : "8em"
+	    }, 3000);
 	});
 </script>
