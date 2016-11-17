@@ -51,3 +51,6 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "font-awesome-rails"
 gem 'friendly_id', '~> 5.1.0'
 gem 'route_translator'
+
+gem 'bootstrap-sass', '3.3.6'
+gem 'faker',          '1.6.6'

@@ -1,0 +1,34 @@
+<% provide(:title, 'Home') %>
+
+
+<div class='background-page'>
+	<div class="content-container">
+	<h1> SOY UN SLIDE </h1>
+	<button class="btn btn-primary down-button" > holu </button>	
+	</div>
+</div>
+<div class='background-page' id="holu" style ="background-color: orange">
+	<div class="content-container">
+	<h1> SOY OTRO SLIDE </h1>
+	</div>
+</div>
+<div class='background-page' style ="background-color: black">
+	<div class="content-container">
+	holu
+	</div>
+</div>
+<div class='background-page'>
+	<div class="content-container">
+	holu
+	</div>
+</div>
+
+
+<script type="text/javascript">
+	
+	$(".down-button").click( function() {
+	    $('html, body').animate({
+	        scrollTop: $("#holu").offset().top
+	    }, 1000);
+	});
+</script>
