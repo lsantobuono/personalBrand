@@ -80,23 +80,54 @@ body {
 		transform: translatey(0%) ;
 		animation-timing-function: ease-in-out;
 	}
-	15% {
+	10% {
 		transform: translatey(50%) ;
 		animation-timing-function: ease-in-out;
 	}
-	85% {
+	20% {
 		transform: translatey(50%) ;
+		animation-timing-function: ease-in-out;
+	}
+	30% {
+		transform: translatey(100%) ;
+		animation-timing-function: ease-in-out;
+		opacity:1;
+	}
+	31% {
+		transform: translatey(100%) ;
+		animation-timing-function: ease-in-out;
+		opacity:0;
+	}
+	32% {
+		transform:  translatex(-300%) translatey(50%);
+		opacity: 0;
+	}
+	69% {
+		transform:  translatex(-300%) translatey(50%);
+		opacity: 0;
+	}
+	70% {
+		transform: translatex(-300%) translatey(50%);
+		animation-timing-function: ease-in-out;
+		opacity:1;
+	}
+	80% {
+		transform: translatex(0px) translatey(50%);
+		animation-timing-function: ease-in-out;
+	}
+	90% {
+		transform: translatex(0px) translatey(50%);
 		animation-timing-function: ease-in-out;
 	}
 	to {
-		transform: translatey(100%) ;
+		transform: translatex(300%) translatey(50%);
 		animation-timing-function: ease-in-out;
 	}
 }
 
 #moving-1 {
 	animation-name: moving-text;
-	animation-duration: 5s;
+	animation-duration: 17s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
@@ -104,27 +135,33 @@ body {
 
 #moving-2 {
 	animation-name: moving-text;
-	animation-duration: 5s;
+	animation-duration: 17s;
 	animation-iteration-count: 1;
-	animation-delay: 4s;
+	animation-delay: 3s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-3 {
 	animation-name: moving-text;
-	animation-duration: 5s;
+	animation-duration: 17s;
 	animation-iteration-count: 1;
-	animation-delay: 8s;
+	animation-delay: 6s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-4 {
 	animation-name: moving-text;
-	animation-duration: 5s;
+	animation-duration: 17s;
 	animation-iteration-count: 1;
-	animation-delay: 12s;
+	animation-delay: 9s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
+}
+
+
+.arrow-button {
+	float:right;
+	height:3em;
 }

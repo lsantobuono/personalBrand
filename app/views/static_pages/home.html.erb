@@ -30,6 +30,7 @@
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam diam enim, interdum ut arcu pellentesque, feugiat dignissim sapien. Donec convallis tempor turpis non cursus. Quisque venenatis elit eros, quis bibendum sapien pharetra quis. Quisque venenatis id sem eget pulvinar. Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis ex sit amet lacinia varius. Maecenas vel tincidunt leo. Sed pretium nunc eget ex imperdiet, a faucibus nibh sodales. 		
 			</p>
+			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1" %>
 		</div>
 	</div>
 </div>
@@ -40,8 +41,14 @@
 </div>
 <div class='background-page' style ="background-color: black">
 	<div class="content-container">
-	holu
-	</div>
+	<div class="between-page-container content-container" id="between-page-2"> 
+		<div class="content-container" style="padding-top:3em;">
+			<h1>Lorem Ipsum</h1>
+			<p style="font-style: italic;">
+				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+			</p>
+		</div>
+	</div>	</div>
 </div>
 <div class='background-page'>
 	<div class="content-container">
@@ -56,9 +63,12 @@
 	    $('html, body').animate({
 	        scrollTop: $("#between-page-1").offset().top
 	    }, 1000);
-	    $('#otro-slide').animate({
-	        fontSize : "8em"
-	    }, 3000);
 	});
 
+	$("#arrow-button-1").click( function() {
+	    $('html, body').animate({
+	        scrollTop: $("#between-page-2").offset().top
+	    }, 1000);
+	});
+	
 </script>
