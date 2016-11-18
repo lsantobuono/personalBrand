@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-
+@import 'jquery.fullpage';
 /* mixins, variables, etc. */
 
 $dark-grey: #666666;
@@ -11,9 +11,10 @@ $panel-grey: #8585ad;
 
 .navbar {
 	margin-bottom: 0;
-		background-color: black;
-		font-size: 1.3em;
-
+	background-color: black;
+	border-color: black;
+	font-size: 1.3em;
+	height: 4em;
 	.navbar-collapse {
 		ul {
 			li {
@@ -40,7 +41,7 @@ body {
 
 
 .background-page {
-	padding-top: 5em; //La NAVBAR
+	padding-top: 6em; //La NAVBAR
     height: 100vh; 
     background:green;
     background-size:cover;
@@ -164,4 +165,67 @@ body {
 .arrow-button {
 	float:right;
 	height:3em;
+	cursor: pointer;
+}
+
+.left-arrow {
+	float:left
+}
+
+.right-arrow {
+	float:right;
+}
+
+.horizontal-arrow {
+	position:relative;
+
+	top:30%;
+	font-size: 2em;
+	padding:1em;
+	background-color: $light-grey;
+	opacity: 0.5;
+	display: inline-block;
+	text-align: center;
+	cursor:pointer;
+	&:hover {
+      background-color: $gray-darker;
+    }
+}
+
+
+
+
+h1 {
+  font-size: 5em;   
+  font-family: arial,helvetica;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.section {
+  text-align:center;
+}
+
+#section1,
+#section2,
+#section3,
+#section4 {
+   background-size: cover;
+}
+
+#section1 {
+  background-image: url(<%= asset_path 'bg1.jpg' %>) ;
+}
+
+#section2 {
+  background-image: url(<%= asset_path 'bg2.jpg' %>) ;
+}
+
+#section3 {
+  background-image: url(<%= asset_path 'bg3.jpg' %>) ;
+}
+
+#section4 {
+  background-image: url(<%= asset_path 'bg4.jpg' %>) ;
 }

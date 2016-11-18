@@ -1,4 +1,24 @@
 <% provide(:title, 'Sobre Nosotros') %>
 
-<h1>StaticPages#about</h1>
-<p>Find me in app/views/static_pages/about.html.erb</p>
+
+<div class="fullpage-about">
+  <div class="section" id="section1"><h1>Title 1</h1></div>
+  <div class="section" id="section2"><h1>Title 2</h1></div>
+  <div class="section" id="section3"><h1>Title 3</h1></div>
+  <div class="section" id="section4"><h1>Title 4</h1></div>
+</div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $("#fullpage-about").fullpage({
+    menu: '.navbar',
+    verticalCentered: true,
+    resize : false,
+    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
+    navigation: true,
+    navigationPosition: 'right',
+    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
+    css3: true
+  });
+});
+</script>

@@ -1,24 +1,23 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title><%= full_title(yield(:title)) %></title>
-    <%= csrf_meta_tags %>
-
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= content_for?(:title) ? yield(:title) : "Personal Brand" %></title>
+    <meta name="description" content="<%= content_for?(:description) ? yield(:description) : "Personal Brand" %>">
+    <%= stylesheet_link_tag 'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
-
   <body>
-	    <%= render 'layouts/header' %>
-	    	<% flash.each do |message_type, message| %>
-	     		<div class="alert alert-<%= message_type %>"><%= message %></div>
-	     	<% end %>
-	     	
-	     	<%= yield %>
-	      
-	      	<%= render 'layouts/footer' %>
-	      
-	      	<aside></aside>
-	      	<%= debug(params) if Rails.env.development? %>      
+    <header>
+      <%= render 'layouts/navigation' %>
+    </header>
+    <%= render 'layouts/header' %>
+     <% flash.each do |message_type, message| %>
+     	<div class="alert alert-<%= message_type %>"><%= message %></div>
+     <% end %>
+     <%= yield %>
+      <%= render 'layouts/footer' %>
+      <aside></aside>
+      <%= debug(params) if Rails.env.development? %>      
   </body>
 </html>

@@ -1,7 +1,12 @@
 <% provide(:title, 'Home') %>
 
-
 <div class='background-page'>
+	<div class="horizontal-arrow left-arrow"><div style="position: relative; top: -50%;"> 
+		< 
+	</div></div>
+	<div class="horizontal-arrow right-arrow"><div style="position: relative; top: -50%;"> 
+		>
+	</div></div>
 	<div class="content-container">
 
 		<div class="moving-text" id="moving-1"> <div style="position: relative; left: -50%;">
@@ -16,10 +21,7 @@
 		<div class="moving-text" id="moving-4"> <div style="position: relative; left: -50%;">
 				Iigula enim suscipit leo,
 		</div>	</div>
-
-
-		<h1> SOY UN SLIDE </h1>
-		<button class="btn btn-primary down-button" > holu </button>	
+			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1" %>
 	</div>
 	<div class="between-page-container content-container" id="between-page-1"> 
 		<div class="content-container" style="padding-top:3em;">
@@ -30,17 +32,13 @@
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam diam enim, interdum ut arcu pellentesque, feugiat dignissim sapien. Donec convallis tempor turpis non cursus. Quisque venenatis elit eros, quis bibendum sapien pharetra quis. Quisque venenatis id sem eget pulvinar. Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis ex sit amet lacinia varius. Maecenas vel tincidunt leo. Sed pretium nunc eget ex imperdiet, a faucibus nibh sodales. 		
 			</p>
-			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1" %>
+			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-2" %>
 		</div>
 	</div>
 </div>
+
+
 <div class='background-page' id="holu" style ="background-color: orange">
-	<div class="content-container">
-	<h1 id="otro-slide"> SOY OTRO SLIDE </h1>
-	</div>
-</div>
-<div class='background-page' style ="background-color: black">
-	<div class="content-container">
 	<div class="between-page-container content-container" id="between-page-2"> 
 		<div class="content-container" style="padding-top:3em;">
 			<h1>Lorem Ipsum</h1>
@@ -48,7 +46,17 @@
 				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
 			</p>
 		</div>
-	</div>	</div>
+	</div>
+</div>
+<div class='background-page' style ="background-color: black">
+	<div class="between-page-container content-container" id="between-page-2"> 
+		<div class="content-container" style="padding-top:3em;">
+			<h1>Lorem Ipsum</h1>
+			<p style="font-style: italic;">
+				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
+			</p>
+		</div>
+	</div>
 </div>
 <div class='background-page'>
 	<div class="content-container">
@@ -59,16 +67,17 @@
 
 <script type="text/javascript">
 	
-	$(".down-button").click( function() {
+	$("#arrow-button-1").click( function() {
 	    $('html, body').animate({
-	        scrollTop: $("#between-page-1").offset().top
+	        scrollTop: $("#between-page-1").offset().top - 50 //TODO: este 50 es polemico
 	    }, 1000);
 	});
 
-	$("#arrow-button-1").click( function() {
+	$("#arrow-button-2").click( function() {
 	    $('html, body').animate({
-	        scrollTop: $("#between-page-2").offset().top
+	        scrollTop: $("#between-page-2").offset().top - 50
 	    }, 1000);
 	});
-	
+
+
 </script>
