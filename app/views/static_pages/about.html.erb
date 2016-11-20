@@ -1,24 +1,67 @@
 <% provide(:title, 'Sobre Nosotros') %>
+       
+<div id="fullpage-about">
+  <div class="section" id="section1">
+  	<h1>Nosotros surfeando</h1>
+	<%= image_tag ("clickMe.png"), class:"click-me-button", id:"clickMe-first-slide" %>
+	<div id="dialog" title="Muy Cool">
+	  <p>Este es un pop-up cool</p>
+	</div>
 
+  </div>
+  <div class="section" id="section2"><h1>Nosotros almorzando</h1></div>
+  <div class="section" id="section3"><h1>Nosotros escalando</h1></div>
+  <div class="section" id="section4"><h1>Nosotros acampando 4</h1></div>
+  <div class="section" id="section5">
+        <div class="slide"><h1>Nosotros usando slides horizontales</h1> </div>
+    	<div class="slide"> <h1>Nosotros usando slides horizontales</h1> </div>
+  </div>
 
-<div class="fullpage-about">
-  <div class="section" id="section1"><h1>Title 1</h1></div>
-  <div class="section" id="section2"><h1>Title 2</h1></div>
-  <div class="section" id="section3"><h1>Title 3</h1></div>
-  <div class="section" id="section4"><h1>Title 4</h1></div>
 </div>
 
 <script type="text/javascript">
-$(document).ready(function() {
-  $("#fullpage-about").fullpage({
-    menu: '.navbar',
-    verticalCentered: true,
-    resize : false,
-    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage'],
-    navigation: true,
-    navigationPosition: 'right',
-    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip'],
-    css3: true
+
+function initialize(){
+	$("#fullpage-about").fullpage({
+	    verticalCentered: true,
+	    resize : false,
+	    anchors:['firstPage', 'secondPage', 'thirdPage', 'fourthPage','fifthPage'],
+	    navigation: true,
+	    navigationPosition: 'right',
+	    navigationTooltips:['firstPageTooltip', 'secondPageTooltip', 'thirdPageTooltip', 'fourthPageTooltip', 'fifthPageTooltip'],
+	    css3: true
   });
+	$( "#dialog" ).dialog({
+		autoOpen: false,
+		show: {
+			effect: "blind",
+			duration: 1000
+		},
+		hide: {
+			effect: "explode",
+			duration: 1000
+		},
+		'buttons' : {
+	        'cancel' : {
+	        	text: "X",
+	            priority: 'secondary', class: 'btn btn-primary', click: function() {
+	            	$('#dialog').dialog("close");
+	            },
+        	}
+    	},
+		close: function () {
+			$('#section1').css("opacity","1");
+		},
+		width:"80%"
+	});
+};
+$(document).ready (initialize);
+
+$('#clickMe-first-slide').click( function() {
+	$('#section1').css("opacity","0.7");
+	$('#dialog').dialog("open");
 });
+
+
+
 </script>
