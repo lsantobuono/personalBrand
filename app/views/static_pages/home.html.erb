@@ -1,12 +1,12 @@
 <% provide(:title, 'Home') %>
 
 <div class='background-page'>
-	<div class="horizontal-arrow left-arrow"><div style="position: relative; top: -50%;"> 
+	<!--<div class="horizontal-arrow left-arrow"><div style="position: relative; top: -50%;"> 
 		< 
 	</div></div>
 	<div class="horizontal-arrow right-arrow"><div style="position: relative; top: -50%;"> 
 		>
-	</div></div>
+	</div></div> -->
 	<div class="content-container">
 
 		<div class="moving-text" id="moving-1"> <div style="position: relative; left: -50%;">
@@ -21,9 +21,14 @@
 		<div class="moving-text" id="moving-4"> <div style="position: relative; left: -50%;">
 				Iigula enim suscipit leo,
 		</div>	</div>
-			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1" %>
 	</div>
-	<div class="between-page-container content-container" id="between-page-1"> 
+
+
+
+	<div class="between-page-container content-container" id="between-page-1">
+		<div class="text-center" style="position:relative; top: -4em;">
+			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1"%>
+		</div>
 		<div class="content-container" style="padding-top:3em;">
 			<h1>Lorem Ipsum</h1>
 			<p style="font-style: italic;">
@@ -32,41 +37,125 @@
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam diam enim, interdum ut arcu pellentesque, feugiat dignissim sapien. Donec convallis tempor turpis non cursus. Quisque venenatis elit eros, quis bibendum sapien pharetra quis. Quisque venenatis id sem eget pulvinar. Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis ex sit amet lacinia varius. Maecenas vel tincidunt leo. Sed pretium nunc eget ex imperdiet, a faucibus nibh sodales. 		
 			</p>
-			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-2" %>
+			<div class="text-center">
+				<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-2" %>
+			</div>
 		</div>
 	</div>
 </div>
 
 
 <div class='background-page' id="holu" style ="background-color: orange">
-	<div class="between-page-container content-container" id="between-page-2"> 
-		<div class="content-container" style="padding-top:3em;">
-			<h1>Lorem Ipsum</h1>
-			<p style="font-style: italic;">
-				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-			</p>
-		</div>
-	</div>
-</div>
-<div class='background-page' style ="background-color: black">
-	<div class="between-page-container content-container" id="between-page-2"> 
-		<div class="content-container" style="padding-top:3em;">
-			<h1>Lorem Ipsum</h1>
-			<p style="font-style: italic;">
-				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-			</p>
-		</div>
-	</div>
-</div>
-<div class='background-page'>
-	<div class="content-container">
-	holu
-	</div>
-</div>
+	<div class="content-container" id="content-container-2" style="position:relative; top:20%;">
+		<div class="row" style="padding-top:4em;">
+			<div class="col-md-6 col-sm-12">
+				<div class="preview-text"> Bienvenido a Brand, somos expertos en</div>
+				<h1>Diseño Web .</h1>
+				<p style="font-size: 1.2em;">Si lo que estás buscando es una agencia experta en <b>diseño web </b> estás en el sitio perfecto.</p>
 
+				<p style="font-size: 1.2em;"">Podemos ayudarte con el diseño de tu nueva página web o tienda online. Diseñaremos y desarrollaremos una página web moderna, atractiva y efectiva que te ayudará a diferenciarte de tu competencia, generar confianza y vender más.
+				</p>
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<%= image_tag ("laptop-design.png"), style:"width:90%;" %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='background-page' style ="background-color: black; color:white;">
+	<div class="content-container">
+		<h1 style="text-align:center;"> Portfolio </h1>
+
+		<ul class="portfolio-list">
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-1.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-2.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-3.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-4.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+<div class='background-page' style ="background-color: red; color:white;">
+	<div class="content-container">
+		<h1> Conectate </h1>
+		<p> Mantenete en contácto con nuestras redes sociales </p>
+		<div class="row" style="margin-top: 2em;">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<a href="#">
+					<div class="circular-link">
+		             	<i class='fa fa-facebook' aria-hidden='true'></i>
+		            </div>
+	        	</a>
+	        	<p style="font-size: 0.8em; color:black; "> FACEBOOK </p>
+			</div>
+			<div class="col-md-3">
+				<a href="#">
+					<div  class="circular-link">
+              			<i class='fa fa-twitter' aria-hidden='true'></i>
+              		</div>
+    		   	</a>
+	        	<p style="font-size: 0.8em; color:black; "> TWITTER </p>
+			</div>
+			<div class="col-md-3"></div>
+		</div>	
+	</div>
+</div>
 
 <script type="text/javascript">
 	
+	$('.preview-portfolio').hover( 
+/*		function() {
+	    	$(this).animate({
+	    	    width: this.width*9/10,
+	   		     heigh: this.height*9/10,
+	    })},
+		function() {
+		    $(this).animate({
+		        width: this.width*10/9,
+		        heigh: this.height*10/9,
+	    })}*/
+	    function() {
+	    	$(this).children('.picture').toggleClass("pic-active",true);
+	    	$(this).children('.content').show(500);
+	    },
+	    function() {
+	    	$(this).children('.picture').removeClass("pic-active",true);
+	    	$(this).children('.content').hide(500);
+	    }
+	);
+
 	$("#arrow-button-1").click( function() {
 	    $('html, body').animate({
 	        scrollTop: $("#between-page-1").offset().top - 50 //TODO: este 50 es polemico
@@ -75,7 +164,7 @@
 
 	$("#arrow-button-2").click( function() {
 	    $('html, body').animate({
-	        scrollTop: $("#between-page-2").offset().top - 50
+	        scrollTop: $("#content-container-2").offset().top - 50
 	    }, 1000);
 	});
 

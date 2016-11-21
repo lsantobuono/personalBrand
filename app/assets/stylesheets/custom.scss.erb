@@ -27,13 +27,19 @@ $panel-grey: #8585ad;
 	}
 }
 
+html,body { //TODO no dejar scrollear horizontal
+    max-width: 100%;
+    overflow-x: hidden;
+}
 
 body {
 	color: white;
 	background-color:$light-grey;
+	font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
 }
 
 .content-container {
+	text-align: center;
 	margin-left: 1em;
 	margin-right: 1em;
 }
@@ -54,7 +60,6 @@ body {
 	width: 95%;
 	position:relative;
 }
-
 @media only screen and (min-width: 860px) {
 	.content-container 
 	{
@@ -67,105 +72,15 @@ body {
 	}
 }
 
-.moving-text {
-	font-size: 3em;
-	top:-1em;
-	bottom:1em;
-	position:absolute;
-	left:50%;
 
-}
-
-@keyframes moving-text {
-	from {
-		transform: translatey(0%) ;
-		animation-timing-function: ease-in-out;
-	}
-	10% {
-		transform: translatey(50%) ;
-		animation-timing-function: ease-in-out;
-	}
-	20% {
-		transform: translatey(50%) ;
-		animation-timing-function: ease-in-out;
-	}
-	30% {
-		transform: translatey(100%) ;
-		animation-timing-function: ease-in-out;
-		opacity:1;
-	}
-	31% {
-		transform: translatey(100%) ;
-		animation-timing-function: ease-in-out;
-		opacity:0;
-	}
-	32% {
-		transform:  translatex(-300%) translatey(50%);
-		opacity: 0;
-	}
-	69% {
-		transform:  translatex(-300%) translatey(50%);
-		opacity: 0;
-	}
-	70% {
-		transform: translatex(-300%) translatey(50%);
-		animation-timing-function: ease-in-out;
-		opacity:1;
-	}
-	80% {
-		transform: translatex(0px) translatey(50%);
-		animation-timing-function: ease-in-out;
-	}
-	90% {
-		transform: translatex(0px) translatey(50%);
-		animation-timing-function: ease-in-out;
-	}
-	to {
-		transform: translatex(300%) translatey(50%);
-		animation-timing-function: ease-in-out;
-	}
-}
-
-#moving-1 {
-	animation-name: moving-text;
-	animation-duration: 17s;
-	animation-iteration-count: 1;
-	animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-}
-
-#moving-2 {
-	animation-name: moving-text;
-	animation-duration: 17s;
-	animation-iteration-count: 1;
-	animation-delay: 3s;
-	animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-}
-
-#moving-3 {
-	animation-name: moving-text;
-	animation-duration: 17s;
-	animation-iteration-count: 1;
-	animation-delay: 6s;
-	animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-}
-
-#moving-4 {
-	animation-name: moving-text;
-	animation-duration: 17s;
-	animation-iteration-count: 1;
-	animation-delay: 9s;
-	animation-timing-function: linear;
-	-webkit-animation-fill-mode: forwards;
-}
 
 
 .arrow-button {
-	float:right;
 	height:3em;
 	cursor: pointer;
+	&:hover {
+		opacity: 0.5;
+	}
 }
 
 .left-arrow {
@@ -193,12 +108,26 @@ body {
 }
 
 
+/* home */
+
+.click-me-button
+{
+	position:relative;
+	width:3em;
+	left:-20%;
+	top:-30%;
+}
+
+.preview-text
+{
+	font-size: 1em;
+	color:$dark-grey;
+}
+
 
 
 h1 {
   font-size: 5em;   
-  font-family: arial,helvetica;
-  color: black;
   margin: 0;
   padding: 0;
 }
@@ -232,10 +161,96 @@ h1 {
 }
 
 
-.click-me-button
-{
-	position:relative;
-	width:3em;
-	left:-20%;
-	top:-30%;
+.portfolio-list {
+  list-style: none;
+  padding: 0;
+  display:flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  li {
+    padding: 10px 0;
+    padding-left:1em;
+
+  }
+
+  .picture {
+    width:330px;
+    height:250px;
+    position:relative;
+  }
+
+  a{
+     /* unvisited link */
+    &:link {
+       color: black;
+    }
+    /* visited link */
+    &:visited {
+    color: black;
+    }
+    /* mouse over link */
+    &:hover {
+      text-decoration: none;
+      color: $gray-light;
+      cursor:pointer;
+      opacity: 0.8;
+
+    }
+  }
 }
+
+.preview-portfolio {
+  position:relative;
+  max-width:350px;
+  width:100%;
+  background-color: black;
+  padding:1em;
+	.content {
+    position:absolute;
+	bottom:0;
+    right:0em;
+    left:0em;
+
+    margin:0px;
+    padding:1em;
+
+    text-align: center;
+    width:100%;
+
+    color: white;
+    background-color: #24313d;
+    font-size: 0.8em;
+    line-height: 1.2em;
+    display: none;
+    text-align: center;
+  }
+
+	.picture {
+		transform:scale(1.1);
+		width:100%;
+	}
+	.pic-active {
+		opacity:0.7;
+  		transform: scale(1.05);
+  		width:100%;
+	}
+	
+}
+
+a:hover .circular-link{
+	background-color: yellow;
+	cursor:pointer;
+}
+
+.circular-link {
+	text-align: center;
+	display:block;
+	height:100px;
+	width:100px;
+	margin: 0 auto 20px auto;
+	font-size:5em;
+	background-color: white;
+	border-radius: 50%;
+	color:black;
+}
+
