@@ -30,10 +30,10 @@
 			<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-1"%>
 		</div>
 		<div class="content-container" style="padding-top:3em;">
-			<h1>Lorem Ipsum</h1>
+			<h1>Sobre Nosotros</h1>
 			<p style="font-style: italic;">
-				Neque porro quisquam est qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit..."
-			</p>
+				Somos dos programadores freelance dedicados al diseño y creacioń de sitios Web
+			</p>	
 			<p>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam diam enim, interdum ut arcu pellentesque, feugiat dignissim sapien. Donec convallis tempor turpis non cursus. Quisque venenatis elit eros, quis bibendum sapien pharetra quis. Quisque venenatis id sem eget pulvinar. Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis ex sit amet lacinia varius. Maecenas vel tincidunt leo. Sed pretium nunc eget ex imperdiet, a faucibus nibh sodales. 		
 			</p>
@@ -65,7 +65,7 @@
 <div class='background-page' style ="background-color: black; color:white;">
 	<div class="content-container">
 		<h1 style="text-align:center;"> Portfolio </h1>
-
+		<p> Algunos de nuestros trabajos </p>
 		<ul class="portfolio-list">
 			<li>
 				<div class="preview-portfolio">
@@ -132,7 +132,30 @@
 		</div>	
 	</div>
 </div>
-
+<div class='background-page' id="contact-page" style ="background-color: #99ccff; color:black;">
+	<div class="content-container">
+		<h2> Contactanos </h2>
+		<p> Nos pondremos en contacto a la brevedad </p>
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<div class="contact-column" > 
+					<%= render("contact_form") %>
+				</div>
+			</div>
+			<div class="col-md-6 col-sm-12"> 
+				<div class="contact-column" style="text-align: left" > 
+					<h4> Información de contacto </h4><br>
+					<div style="font-size:0.9em;">
+		            	<i class='fa fa-phone' aria-hidden='true' style="color:white"></i> 4444-4444<br>
+		          	  	<i class='fa fa-phone' aria-hidden='true' style="color:white"></i> 610-617-057<br>
+		          	  	<i class='fa fa-envelope' aria-hidden='true' style="color:white"></i> info@brand.com<br>
+		          	  	<i class='fa fa-globe' aria-hidden='true' style="color:white"></i> www.brand.com<br>
+		          	 </div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 <script type="text/javascript">
 	
 	$('.preview-portfolio').hover( 
@@ -167,6 +190,8 @@
 	        scrollTop: $("#content-container-2").offset().top - 50
 	    }, 1000);
 	});
+
+
 
 
 </script>

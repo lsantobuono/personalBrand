@@ -16,9 +16,9 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "Sobre Nosotros",   about_path  %></li>
+        <li><a href="#" id="about-link">Sobre Nosotros </a></li>
         <li><%= link_to "Freelance",   freelance_path  %></li>
-        <li><%= link_to "Contactar",   contact_path  %></li>
+        <li><a href="#" id="contact-link">Contactar </a></li>
         <li>
             <%= link_to  "#" do %>
               <i class='fa fa-facebook' aria-hidden='true'></i>
@@ -38,3 +38,16 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
+
+<script type="text/javascript">
+    $("#contact-link").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#contact-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  });
+    $("#about-link").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#between-page-1").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  });
+</script>

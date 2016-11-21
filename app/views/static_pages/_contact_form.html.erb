@@ -1,0 +1,32 @@
+<%= form_for @message do |f| %>
+
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <div class="row">
+    <div class="col-md-6">
+      <div class="field">
+        <%= f.text_field :name, placeholder:"Nombre" %>
+      </div>
+      <br>
+      <div class="field">
+        <%= f.email_field :email, placeholder:"Email" %>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="field">
+        <%= f.text_area :content, placeholder:"Mensaje", size: "15x4" %>
+      </div>
+    </div>
+  </div><br>
+  <div class="actions">
+    <%= f.submit 'Enviar', class: 'btn btn-primary', id: 'submit-contact', style: "background-color: #800000" %>
+  </div>
+<% end %>
+
+<script type="text/javascript">
+$(document).ready(function () {
+  $('#message_name').val('');
+  $('#message_email').val('');
+  $('#message_content').val('');
+});
+</script>
