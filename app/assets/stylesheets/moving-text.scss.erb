@@ -13,55 +13,53 @@
 	from {
 		transform: translatey(0%) ;
 		animation-timing-function: ease-in-out;
+		opacity:0;
 	}
-	10% {
+	4% {
 		transform: translatey(50%) ;
-		animation-timing-function: ease-in-out;
-	}
-	20% {
-		transform: translatey(50%) ;
-		animation-timing-function: ease-in-out;
-	}
-	30% {
-		transform: translatey(100%) ;
 		animation-timing-function: ease-in-out;
 		opacity:1;
 	}
-	31% {
+	16% {
+		transform: translatey(50%) ;
+		animation-timing-function: ease-in-out;
+		opacity:1;
+	}
+
+	20% {
 		transform: translatey(100%) ;
 		animation-timing-function: ease-in-out;
 		opacity:0;
 	}
-	32% {
+	21% {
 		transform:  translatex(-300%) translatey(50%);
 		opacity: 0;
 	}
-	69% {
+
+	80% {
 		transform:  translatex(-300%) translatey(50%);
 		opacity: 0;
 	}
-	70% {
-		transform: translatex(-300%) translatey(50%);
+	84% {
+		transform: translatex(0px) translatey(50%);
+		animation-timing-function: ease-in-out;
+		opacity:1
+	}
+	96% {
+		transform: translatex(0px) translatey(50%);
 		animation-timing-function: ease-in-out;
 		opacity:1;
-	}
-	80% {
-		transform: translatex(0px) translatey(50%);
-		animation-timing-function: ease-in-out;
-	}
-	90% {
-		transform: translatex(0px) translatey(50%);
-		animation-timing-function: ease-in-out;
 	}
 	to {
 		transform: translatex(300%) translatey(50%);
 		animation-timing-function: ease-in-out;
+		opacity: 0;
 	}
 }
 
 #moving-1 {
 	animation-name: moving-text;
-	animation-duration: 17s;
+	animation-duration: 12.5s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
@@ -69,28 +67,103 @@
 
 #moving-2 {
 	animation-name: moving-text;
-	animation-duration: 17s;
+	animation-duration: 12.5s;
 	animation-iteration-count: 1;
-	animation-delay: 3s;
+	animation-delay: 2.5s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-3 {
 	animation-name: moving-text;
-	animation-duration: 17s;
+	animation-duration: 12.5s;
 	animation-iteration-count: 1;
-	animation-delay: 6s;
+	animation-delay: 5s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-4 {
 	animation-name: moving-text;
-	animation-duration: 17s;
+	animation-duration: 12.5s;
 	animation-iteration-count: 1;
-	animation-delay: 9s;
+	animation-delay: 7.5s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
+.static-description {
+	width: 25em;
+	opacity:0;
+}
+
+.static-description-right {
+	margin-right:0; 
+	margin-left: auto;
+}
+
+
+
+@keyframes animation-static-description {
+	from {
+		opacity:0;
+	}
+	4% {
+		opacity:1;
+	}
+	16% {
+		opacity:1;
+	}
+
+	20% {
+		opacity:0;
+	}
+
+	80% {
+		opacity: 0;
+	}
+	84% {
+		opacity:1
+	}
+	96% {
+		opacity:1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+#static-1 {
+	animation-name: animation-static-description;
+	animation-duration: 12.5s;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#static-2 {
+	animation-name: animation-static-description;
+	animation-duration: 12.5s;
+	animation-iteration-count: 1;
+	animation-delay: 2.5s;
+	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#static-3 {
+	animation-name: animation-static-description;
+	animation-duration: 12.5s;
+	animation-iteration-count: 1;
+	animation-delay: 5s;
+	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
+
+#static-4 {
+	animation-name: animation-static-description;
+	animation-duration: 12.5s;
+	animation-iteration-count: 1;
+	animation-delay: 7.5s;
+	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards;
+}
