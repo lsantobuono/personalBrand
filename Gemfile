@@ -24,6 +24,11 @@ group :development do
   gem 'rails_layout'
 end
 
+group :production do
+  gem 'pg', '0.18.4'
+end
+
+
 group :development do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console'
