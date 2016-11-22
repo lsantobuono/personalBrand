@@ -25,27 +25,28 @@
 			<div class="col-md-6 col-sm-12 " >
 				<div class="static-description" id="static-1">
 					<%= image_tag ("web-design.png"), class:"front-page-image" %>
-					Holu Hacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web
+					<br>
+					<p>Holu Hacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description static-description-right" id="static-2">
 					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
-					HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web
+					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
 				</div>
 			</div>
 		</div>
-		<div class="row front-page-row">
+		<div class="row front-page-row" style="	 margin-top:2em; ">
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description" id="static-3">
-				<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
-				HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web
+					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
+					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="static-description static-description-right" id="static-4">
 					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
-					HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web
+					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
 				</div>
 			</div>
 		</div>
@@ -149,28 +150,36 @@
 		</div>	
 	</div>
 </div>
-<div class='background-page' id="contact-page" style ="background-color: $light-grey;; color:black;">
-	<div class="content-container">
-		<h2> Contactanos </h2>
-		<p> Nos pondremos en contacto a la brevedad </p>
-		<div class="row">
-			<div class="col-md-6 col-sm-12"> 
-				<div class="contact-column" style="text-align: left" > 
-					<h4 style="margin-top:0"> Información de contacto </h4><br>
-					<div style="font-size:0.9em;">
-		            	<i class='fa fa-phone' aria-hidden='true' style="color:white"></i> 4444-4444<br>
-		          	  	<i class='fa fa-phone' aria-hidden='true' style="color:white"></i> 610-617-057<br>
-		          	  	<i class='fa fa-envelope' aria-hidden='true' style="color:white"></i> info@brand.com<br>
-		          	  	<i class='fa fa-globe' aria-hidden='true' style="color:white"></i> www.brand.com<br>
-		          	 </div>
-				</div>
-			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="contact-column" > 
-					<%= render("contact_form") %>
-				</div>
-			</div>
+<div class='background-page' id="contact-page" style ="background-color: $light-grey; color:black; padding-top:0;">
+	<div class="video-container">
+		<div class="video-display">
+			<video playsinline autoplay muted loop id="bgvid" style="width:100%; height:100%">
+			    <source src=<%= video_path "background.mp4" %> type="video/mp4">
+			</video>
 		</div>
+			<div class="content-container video-content">
+				<h2> Contactanos </h2>
+				<p> Nos pondremos en contacto a la brevedad </p>
+				<div class="row">
+					<div class="col-md-3 col-sm-12"></div>	
+					<div class="col-md-3 col-sm-12"> 
+						<div class="contact-column" style="text-align: left" > 
+							<h4 style="margin-top:0"> Información de contacto </h4><br>
+							<div style="font-size:0.9em;">
+				            	<i class='fa fa-phone' aria-hidden='true' style="color:	orange"></i> 4444-4444<br>
+				          	  	<i class='fa fa-phone' aria-hidden='true' style="color:orange"></i> 610-617-057<br>
+				          	  	<i class='fa fa-envelope' aria-hidden='true' style="color:orange"></i> info@brand.com<br>
+				          	  	<i class='fa fa-globe' aria-hidden='true' style="color:orange"></i> www.brand.com<br>
+				          	 </div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="contact-column" style="color:black;" > 
+							<%= render("contact_form") %>
+						</div>
+					</div>
+				</div>
+			</div>
 	</div>
 </div>
 <script type="text/javascript">
@@ -208,7 +217,7 @@
 	    }, 1000);
 	});
 
-	$.fn.extend({
+/*	$.fn.extend({
 	   qcss: function(css) {
 	      return $(this).queue(function(next) {
 	         $(this).css(css);
@@ -222,10 +231,10 @@
 			.delay(20000)
 			.qcss({opacity:"1"})
 		});
-
-	$("#static-1").on("transitionend webkitTransitionEnd oTransitionEnd MSTransitionEnd", 
-		function(){ 
-			alert("holu");
-			this.css("opacity","1"
-				)});
+*/
+	$("#static-4").on("animationend oAnimationEnd animationend webkitAnimationEnd", 
+		function(e){
+			$(".static-description").css({"opacity":"1"});
+			$(this).off(e);
+		});
 </script>
