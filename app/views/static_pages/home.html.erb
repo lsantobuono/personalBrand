@@ -6,13 +6,15 @@
 	<div class="horizontal-arrow right-arrow"><div style="position: relative; top: -50%;"> 
 		>
 	</div></div> -->
+<div class='background-page' id="background-first-panel"  >
+
 	<div class="content-container"  style="background-color: $light-grey; color:black; ">
 
 		<div class="moving-text" id="moving-1"> <div style="position: relative; left: -50%;">
 				Diseño Web
 		</div>	</div>
 		<div class="moving-text" id="moving-2"> <div style="position: relative; left: -50%;">
-				Desarrollo Aplicaciones Web
+				Desarrollo de Aplicaciones Web
 		</div>	</div>
 		<div class="moving-text" id="moving-3"> <div style="position: relative; left: -50%;">
 				Sitios Web Mobile
@@ -24,47 +26,51 @@
 
 
 		<div class="row front-page-row text-center" >
-			<div class="col-md-6 col-sm-12 " >
+			<div class="col-md-3 col-sm-6 " >
 				<div class="static-description" id="static-1">
 					<%= image_tag ("web-design.png"), class:"front-page-image" %>
 					<br>
+					<p class="home-title"> Diseño Web </p>
 					<p class="home-description">Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12" >
-				<div class="static-description static-description-right" id="static-2">
+			<div class="col-md-3 col-sm-6 " >
+				<div class="static-description t" id="static-2">
 					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
+					<p class="home-title"> Desarrollo  de Aplicaciones Web </p>
 					<p class="home-description">Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
 				</div>
 			</div>
-		</div>
-
-		<div class="col-md-4 text-center"> 
-		</div>
-
-		<div class="col-md-4 text-center" >
-			<button class="btn btn-primary boton-naranja" id="start-button" style="opacity:0">
-				Conocenos
-			</button>
-		</div>
-
-	
-		<div class="row front-page-row" style="	 margin-top:2em; ">
-			<div class="col-md-6 col-sm-12" >
+			<div class="col-md-3 col-sm-6 " >
 				<div class="static-description" id="static-3">
 					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
+					<p class="home-title"> Sitios Web Mobile </p>
 					<p class="home-description">Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
 				</div>
 			</div>
-			<div class="col-md-6 col-sm-12">
-				<div class="static-description static-description-right" id="static-4">
+			<div class="col-md-3 col-sm-6 " >
+				<div class="static-description " id="static-4">
 					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
+					<p class="home-title"> Tiendas Online </p>
 					<p class="home-description">Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
 				</div>
 			</div>
 		</div>
-	</div>
 
+		<div class="row">
+			<div class="col-md-12 text-center" >
+				<div id="start-frame" style="opacity:0">
+					<h2 style="font-style: italic">¡Bienvenido!</h2>
+					<h1> DESARROLLO WEB </h1>
+					<h3> Pipa y Mono </h3>
+					<button class="btn btn-primary boton-naranja" id="start-button" >
+						Conocenos
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
 <div class='background-page' id="welcome-page" style ="background-color: orange; color:white;">
 	<div class="content-container" id="content-container-2" style="position:relative; top:20%;">
@@ -302,9 +308,10 @@
 */
 	$("#static-4").on("animationend oAnimationEnd animationend webkitAnimationEnd", 
 		function(e){
-			$(".static-description").css({"opacity":"1"});
-			$("#start-button").css({"opacity":"1"});
-			$(".home-description").css({"opacity":"1"});
+			$(".static-description").animate({"opacity":"1"},1000);
+			$("#start-frame").animate({"opacity":"1"},1000);
+			$(".home-title").animate({"opacity":"1"},1000);
+	//		$(".home-description").css({"opacity":"1"});
 			$(this).off(e);
 		});
 </script>

@@ -8,7 +8,8 @@
 	left:50%;
 
 }
-
+// Este hacia el arriba. abajo. izquierda derecha.
+/*
 @keyframes moving-text {
 	from {
 		transform: translatey(0%) ;
@@ -55,11 +56,33 @@
 		animation-timing-function: ease-in-out;
 		opacity: 0;
 	}
+}*/
+
+@keyframes moving-text {
+	from {
+		transform:  translatex(-300%) translatey(50%);
+		opacity: 0;
+	}
+	25% {
+		transform: translatex(0px) translatey(50%);
+		animation-timing-function: ease-in-out;
+		opacity:1
+	}
+	75% {
+		transform: translatex(0px) translatey(50%);
+		animation-timing-function: ease-in-out;
+		opacity:1;
+	}
+	to {
+		transform: translatex(300%) translatey(50%);
+		animation-timing-function: ease-in-out;
+		opacity: 0;
+	}
 }
 
 #moving-1 {
 	animation-name: moving-text;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
@@ -67,33 +90,33 @@
 
 #moving-2 {
 	animation-name: moving-text;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 2.5s;
+	animation-delay: 3.5s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-3 {
 	animation-name: moving-text;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 5s;
+	animation-delay: 7s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 #moving-4 {
 	animation-name: moving-text;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 7.5s;
+	animation-delay: 10.5s;
 	animation-timing-function: linear;
 	-webkit-animation-fill-mode: forwards;
 }
 
 .static-description {
-	width: 25em;
+	width: 90%;
 	opacity:0;
 }
 
@@ -103,7 +126,8 @@
 }
 
 
-
+// Este iba con el de arriba 
+/*
 @keyframes animation-static-description {
 	from {
 		opacity:0;
@@ -131,37 +155,57 @@
 	to {
 		opacity: 0;
 	}
+}*/
+
+@keyframes animation-static-description {
+	from {
+		opacity:0;
+	}
+	25% {
+		opacity:1;
+	}
+	to {
+		opacity: 1;
+	}
 }
 
 #static-1 {
 	animation-name: animation-static-description;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
 	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
 }
 
 #static-2 {
 	animation-name: animation-static-description;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 2.5s;
+	animation-delay: 3.5s;
 	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
 }
 
 #static-3 {
 	animation-name: animation-static-description;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 5s;
+	animation-delay: 7.5s;
 	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
 }
 
 #static-4 {
 	animation-name: animation-static-description;
-	animation-duration: 12.5s;
+	animation-duration: 4s;
 	animation-iteration-count: 1;
-	animation-delay: 7.5s;
+	animation-delay: 11.5s;
 	animation-timing-function: linear;
+	-webkit-animation-fill-mode: forwards; /* Safari 4.0 - 8.0 */
+    animation-fill-mode: forwards;
 }
 
 
