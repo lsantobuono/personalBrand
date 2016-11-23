@@ -1,4 +1,34 @@
 <% provide(:title, 'Contacto') %>
 
-<h1>StaticPages#contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<div class='background-page' id="contact-page" style ="background-color: $light-grey; color:black; padding-top:4em;">
+	<div class="video-container" style="height:600px">
+		<div class="video-display">
+			<video playsinline autoplay muted loop id="bgvid" style="width:100%; height:100%">
+			    <source src=<%= video_path "background.mp4" %> type="video/mp4">
+			</video>
+		</div>
+			<div class="content-container video-content" style="padding-top:4em;">
+				<h2> Contactanos </h2>
+				<p> Nos pondremos en contacto a la brevedad </p>
+				<div class="row">
+					<div class="col-md-3 col-sm-12"></div>	
+					<div class="col-md-3 col-sm-12"> 
+						<div class="contact-column" style="text-align: left" > 
+							<h4 style="margin-top:0"> Información de contacto </h4><br>
+							<div style="font-size:0.9em;">
+				            	<i class='fa fa-phone' aria-hidden='true' style="color:	orange"></i> 4444-4444<br>
+				          	  	<i class='fa fa-phone' aria-hidden='true' style="color:orange"></i> 610-617-057<br>
+				          	  	<i class='fa fa-envelope' aria-hidden='true' style="color:orange"></i> info@brand.com<br>
+				          	  	<i class='fa fa-globe' aria-hidden='true' style="color:orange"></i> www.brand.com<br>
+				          	 </div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="contact-column" style="color:black;" > 
+							<%= render("contact_form") %>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>

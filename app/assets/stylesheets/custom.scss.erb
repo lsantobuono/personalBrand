@@ -280,12 +280,43 @@ video#bgvid {
 video {
 	    object-fit: cover;
 }
+
+@media only screen and (max-width: 800px) {
+    #bgvid {
+        display: none;
+    }
+    .video-content {
+    	color:black !important;
+    }
+}
+
+
 .video-content {
- 
     top:0; left:0;
     color:white;
 }
 
 
-//.videoClick {text-align:center}
-//.videoClick a{color:white;background-color:rgba(241, 241, 241, 0.25);font-size: 1.7em;cursor:pointer;cursor:hand}
+.freelance-text {
+	font-family: 'Roboto', Helvetica, sans-serif;
+	src: url("https://fonts.gstatic.com/s/roboto/v15/Hgo13k-tfSpn0qi1SFdUfVtXRa8TVwTICgirnJhmVJw.woff2") format('woff2');
+}
+
+.text-input:focus {
+
+}
+
+.tooltip-icon {
+	width:10em;
+	height:10em;
+}
+
+#background-desk {
+	background: url(<%= asset_path 'background-desk.jpg' %>) no-repeat center center fixed; 
+	-webkit-background-size: cover;
+  	moz-background-size: cover;
+  	o-background-size: cover;
+  	background-size: cover;
+  	height: 300px;
+  	line-height: 300px;
+}

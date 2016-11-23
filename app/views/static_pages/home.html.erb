@@ -12,7 +12,7 @@
 				Diseño Web
 		</div>	</div>
 		<div class="moving-text" id="moving-2"> <div style="position: relative; left: -50%;">
-				Desarrollo Web
+				Desarrollo Aplicaciones Web
 		</div>	</div>
 		<div class="moving-text" id="moving-3"> <div style="position: relative; left: -50%;">
 				Sitios Web Mobile
@@ -26,13 +26,13 @@
 				<div class="static-description" id="static-1">
 					<%= image_tag ("web-design.png"), class:"front-page-image" %>
 					<br>
-					<p>Holu Hacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
+					<p>Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description static-description-right" id="static-2">
 					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
-					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
+					<p>Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
 				</div>
 			</div>
 		</div>
@@ -40,13 +40,13 @@
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description" id="static-3">
 					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
-					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
+					<p>Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="static-description static-description-right" id="static-4">
 					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
-					<p>HoluHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño webHacemos diseño web</p>
+					<p>Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
 				</div>
 			</div>
 		</div>
@@ -70,8 +70,8 @@
 			<!--<div class="text-center">
 				<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-2" %>
 			</div>-->
-			<button type="button" class="btn btn-warning boton-negro" >Portfolio</button>
-			<button type="button" class="btn btn-warning boton-negro" >Contactanos</button>
+			<button type="button" class="btn btn-warning boton-negro" id="portfolio-button">Portfolio</button>
+			<button type="button" class="btn btn-warning boton-negro" id="contact-button">Contactanos</button>
 
 			</div>
 			<div class="col-md-6 col-sm-12">
@@ -80,7 +80,7 @@
 		</div>
 	</div>
 </div>
-<div class='background-page' style ="background-color: $light-grey; color:black;">
+<div class='background-page' id="portfolio-page" style ="background-color: $light-grey; color:black;">
 	<div class="content-container">
 		<h1 style="text-align:center;"> Portfolio </h1>
 		<p> Algunos de nuestros trabajos </p>
@@ -124,7 +124,54 @@
 		</ul>
 	</div>
 </div>
+
+<div class='background-page' id="background-desk" style="text-align: center;" >
+
+	<div style="position:relative; line-height: normal; display:inline-block; top:-60px">
+		<span class="panel-moving-text" id="panel-moving-1">  
+			<div class="panel-moving-inside">
+				RESPONSIVE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-2">
+			<div class="panel-moving-inside">
+				E-COMMERCE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-3"> 
+			<div class="panel-moving-inside">
+				DISEÑO WEB
+			</div>
+		</span> 
+	</div>
+</div>
+
 <div class='background-page' style ="background-color: orange; color:white;">
+	<div class="content-container">
+	<h1> Herramientas </h1>
+	<p style="font-style: italic"> Algunas de las herramientas que usamos en nuestros desarrollos </p>
+		<div class="row" style="margin-top: 2em;">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<%= image_tag "rails.png", class: "tooltip-icon" %>
+				<div style="font-size: 0.8em;" >
+		        	<p style="font-weight: bold;"> Ruby on Rails </p>
+		        	<p> También conocido como RoR o Rails, es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma del patrón Modelo Vista Controlador (MVC).</p>
+	        	</div>
+			</div>
+			<div class="col-md-3">
+				<%= image_tag "html5css3.png", class: "tooltip-icon", style: "width:15em"%>
+	        	<div style="font-size: 0.8em;" >
+		        	<p style="font-weight: bold;"> Html5 + Css3 </p>
+		        	<p> Las últimas versiones de las herrramientas más comunes en el desarrollo web moderno.</p>
+	        	</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>	
+	</div>
+</div>
+
+<div class='background-page' style ="background-color: $light-grey; color:black;">
 	<div class="content-container">
 		<h1> Conectate </h1>
 		<p> Mantenete en contácto con nuestras redes sociales </p>
@@ -205,17 +252,17 @@
 	    }
 	);
 
-	$("#arrow-button-1").click( function() {
-	    $('html, body').animate({
-	        scrollTop: $("#between-page-1").offset().top - 50 //TODO: este 50 es polemico
-	    }, 1000);
-	});
+    $("#contact-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#contact-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
 
-	$("#arrow-button-2").click( function() {
-	    $('html, body').animate({
-	        scrollTop: $("#content-container-2").offset().top - 50
-	    }, 1000);
-	});
+    $("#portfolio-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#portfolio-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
 
 /*	$.fn.extend({
 	   qcss: function(css) {
