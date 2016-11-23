@@ -20,40 +20,53 @@
 		<div class="moving-text" id="moving-4"> <div style="position: relative; left: -50%;">
 				Tiendas Online
 		</div>	</div>
+		
+
 
 		<div class="row front-page-row text-center" >
 			<div class="col-md-6 col-sm-12 " >
 				<div class="static-description" id="static-1">
 					<%= image_tag ("web-design.png"), class:"front-page-image" %>
 					<br>
-					<p>Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
+					<p class="home-description">Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description static-description-right" id="static-2">
 					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
-					<p>Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
+					<p class="home-description">Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
 				</div>
 			</div>
 		</div>
+
+		<div class="col-md-4 text-center"> 
+		</div>
+
+		<div class="col-md-4 text-center" >
+			<button class="btn btn-primary boton-naranja" id="start-button" style="opacity:0">
+				Conocenos
+			</button>
+		</div>
+
+	
 		<div class="row front-page-row" style="	 margin-top:2em; ">
 			<div class="col-md-6 col-sm-12" >
 				<div class="static-description" id="static-3">
 					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
-					<p>Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
+					<p class="home-description">Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
 				</div>
 			</div>
 			<div class="col-md-6 col-sm-12">
 				<div class="static-description static-description-right" id="static-4">
 					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
-					<p>Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
+					<p class="home-description">Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
 				</div>
 			</div>
 		</div>
 	</div>
 
 
-<div class='background-page' id="holu" style ="background-color: orange; color:white;">
+<div class='background-page' id="welcome-page" style ="background-color: orange; color:white;">
 	<div class="content-container" id="content-container-2" style="position:relative; top:20%;">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
@@ -125,26 +138,7 @@
 	</div>
 </div>
 
-<div class='background-page' id="background-desk" style="text-align: center;" >
 
-	<div style="position:relative; line-height: normal; display:inline-block; top:-60px">
-		<span class="panel-moving-text" id="panel-moving-1">  
-			<div class="panel-moving-inside">
-				RESPONSIVE
-			</div>
-		</span> 
-		<span class="panel-moving-text" id="panel-moving-2">
-			<div class="panel-moving-inside">
-				E-COMMERCE
-			</div>
-		</span> 
-		<span class="panel-moving-text" id="panel-moving-3"> 
-			<div class="panel-moving-inside">
-				DISEÑO WEB
-			</div>
-		</span> 
-	</div>
-</div>
 
 <div class='background-page' style ="background-color: orange; color:white;">
 	<div class="content-container">
@@ -168,6 +162,26 @@
 			</div>
 			<div class="col-md-3"></div>
 		</div>	
+	</div>
+</div>
+
+<div class='background-page' id="background-desk" style="text-align: center;" >
+	<div style="position:relative; line-height: normal; display:inline-block; top:-60px">
+		<span class="panel-moving-text" id="panel-moving-1">  
+			<div class="panel-moving-inside">
+				RESPONSIVE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-2">
+			<div class="panel-moving-inside">
+				E-COMMERCE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-3"> 
+			<div class="panel-moving-inside">
+				DISEÑO WEB
+			</div>
+		</span> 
 	</div>
 </div>
 
@@ -264,6 +278,13 @@
       }, 1000);
   	});
 
+    $("#start-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#welcome-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
+
+
 /*	$.fn.extend({
 	   qcss: function(css) {
 	      return $(this).queue(function(next) {
@@ -282,6 +303,8 @@
 	$("#static-4").on("animationend oAnimationEnd animationend webkitAnimationEnd", 
 		function(e){
 			$(".static-description").css({"opacity":"1"});
+			$("#start-button").css({"opacity":"1"});
+			$(".home-description").css({"opacity":"1"});
 			$(this).off(e);
 		});
 </script>
