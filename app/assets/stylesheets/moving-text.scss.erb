@@ -2,7 +2,7 @@
 
 .moving-text {
 	font-size: 3em;
-	top:-1em;
+	top:-2em;
 	bottom:1em;
 	position:absolute;
 	left:50%;
@@ -118,13 +118,29 @@
 .static-description {
 	width: 90%;
 	opacity:0;
-}
-
-.static-description-right {
-	margin-right:0; 
+	cursor:pointer;
+	margin-right: auto;
 	margin-left: auto;
 }
 
+.col-front-page {
+	padding:1em;
+}
+
+.col-front-page.show:after {
+	content: '';
+	display: block;
+	width: 0;
+	height: 0;
+	border: .5em solid #dcf0ff;
+	border-bottom-color: transparent;
+	border-right-color: transparent;
+	border-left-color: transparent;
+	position: absolute;
+	opacity:1;
+	bottom:-10px;
+	left:50%;
+}
 
 // Este iba con el de arriba 
 /*

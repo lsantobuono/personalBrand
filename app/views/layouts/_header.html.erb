@@ -1,4 +1,4 @@
-<nav class="navbar navbar-default navbar-fixed-top">
+<div class="navbar navbar-default navbar-fixed-top">
   <div class="container">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
@@ -16,25 +16,25 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
-        <li><%= link_to "FREELANCE",   freelance_path ,style: "color:orange" %></li>
-        <li><%= link_to "CONTACTO",   contact_path ,style: "color:orange" %></li>
+        <li><%= link_to "FREELANCE",   freelance_path %></li>
+        <li><%= link_to "CONTACTO",   contact_path  %></li>
 
         <li>
             <%= link_to  "#" do %>
-              <i class='fa fa-facebook' aria-hidden='true' style="color:orange;"></i>
+              <i class='fa fa-facebook' aria-hidden='true'></i>
             <% end %>
         </li>
         <li>
             <%= link_to  "#" do %>
-              <i class='fa fa-twitter' aria-hidden='true' style="color:orange;"></i>
+              <i class='fa fa-twitter' aria-hidden='true'></i>
             <% end %>
         </li>
         <li>
             <%= link_to  "#" do %>
-              <p style="color:orange;"><i class='fa fa-phone' aria-hidden='true' ></i> 4444-4444</p>
+              <i class='fa fa-phone' aria-hidden='true'></i> 4444-4444
             <% end %>
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div>
-</nav>
+</div>

@@ -1,4 +1,4 @@
-<% provide(:title, 'Home') %>
+<% provide(:title, 'Diseño Web') %>
 
 	<!--<div class="horizontal-arrow left-arrow"><div style="position: relative; top: -50%;"> 
 		< 
@@ -26,40 +26,43 @@
 
 
 		<div class="row front-page-row text-center" >
-			<div class="col-md-3 col-sm-6 " >
+			<div class="col-md-3 col-sm-6 col-front-page" >
 				<div class="static-description" id="static-1">
 					<%= image_tag ("web-design.png"), class:"front-page-image" %>
-					<br>
-					<p class="home-title"> Diseño Web </p>
-					<p class="home-description">Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
+					<p class="home-title" > Diseño Web </p>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 " >
-				<div class="static-description t" id="static-2">
+			<div class="col-md-3 col-sm-6 col-front-page" >
+				<div class="static-description " id="static-2">
 					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
 					<p class="home-title"> Desarrollo  de Aplicaciones Web </p>
-					<p class="home-description">Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 " >
+			<div class="col-md-3 col-sm-6 col-front-page" >
 				<div class="static-description" id="static-3">
 					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
 					<p class="home-title"> Sitios Web Mobile </p>
-					<p class="home-description">Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
 				</div>
 			</div>
-			<div class="col-md-3 col-sm-6 " >
+			<div class="col-md-3 col-sm-6 col-front-page" >
 				<div class="static-description " id="static-4">
 					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
 					<p class="home-title"> Tiendas Online </p>
-					<p class="home-description">Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
 				</div>
 			</div>
 		</div>
 
+		<div class="row"  style="height:4em;">
+			<div class="col-md-12 text-center" >
+					<p class="home-description" id="description-1">Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
+					<p class="home-description" id="description-2">Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
+					<p class="home-description" id="description-3">Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
+					<p class="home-description" id="description-4">Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
+			</div>
+		</div>
 		<div class="row">
 			<div class="col-md-12 text-center" >
-				<div id="start-frame" style="opacity:0">
+						<div id="start-frame" style="opacity:0">
 					<h2 style="font-style: italic">¡Bienvenido!</h2>
 					<h1> DESARROLLO WEB </h1>
 					<h3> Pipa y Mono </h3>
@@ -73,7 +76,7 @@
 </div>
 
 <div class='background-page' id="welcome-page" style ="background-color: orange; color:white;">
-	<div class="content-container" id="content-container-2" style="position:relative; top:20%;">
+	<div class="content-container fadeInBlock" id="content-container-2" style="position:relative; top:20%;">
 		<div class="row">
 			<div class="col-md-6 col-sm-12">
 				<div class="preview-text"> Bienvenido a Brand, somos expertos en</div>
@@ -100,7 +103,7 @@
 	</div>
 </div>
 <div class='background-page' id="portfolio-page" style ="background-color: $light-grey; color:black;">
-	<div class="content-container">
+	<div class="content-container fadeInBlock">
 		<h1 style="text-align:center;"> Portfolio </h1>
 		<p> Algunos de nuestros trabajos </p>
 		<ul class="portfolio-list">
@@ -140,6 +143,24 @@
 					</div>
 				</div>
 			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-5.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-6.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
 		</ul>
 	</div>
 </div>
@@ -147,7 +168,7 @@
 
 
 <div class='background-page' style ="background-color: orange; color:white;">
-	<div class="content-container">
+	<div class="content-container fadeInBlock">
 	<h1> Herramientas </h1>
 	<p style="font-style: italic"> Algunas de las herramientas que usamos en nuestros desarrollos </p>
 		<div class="row" style="margin-top: 2em;">
@@ -172,7 +193,7 @@
 </div>
 
 <div class='background-page' id="background-desk" style="text-align: center;" >
-	<div style="position:relative; line-height: normal; display:inline-block; top:-60px">
+	<div class="fadeInBlock" style="position:relative; line-height: normal; display:inline-block; top:-60px">
 		<span class="panel-moving-text" id="panel-moving-1">  
 			<div class="panel-moving-inside">
 				RESPONSIVE
@@ -192,7 +213,7 @@
 </div>
 
 <div class='background-page' style ="background-color: $light-grey; color:black;">
-	<div class="content-container">
+	<div class="content-container fadeInBlock">
 		<h1> Conectate </h1>
 		<p> Mantenete en contácto con nuestras redes sociales </p>
 		<div class="row" style="margin-top: 2em;">
@@ -218,7 +239,7 @@
 	</div>
 </div>
 <div class='background-page' id="contact-page" style ="background-color: $light-grey; color:black; padding-top:0;">
-	<div class="video-container">
+	<div class="video-container fadeInBlock">
 		<div class="video-display">
 			<video playsinline autoplay muted loop id="bgvid" style="width:100%; height:100%">
 			    <source src=<%= video_path "background.mp4" %> type="video/mp4">
@@ -305,13 +326,62 @@
 			.delay(20000)
 			.qcss({opacity:"1"})
 		});
+
+$(document).ready(function(){$(".static-description").animate({"opacity":"1"},1000);
+			$("#start-frame").animate({"opacity":"1"},1000);
+			$(".home-title").animate({"opacity":"1"},1000);});
+
 */
+
+
 	$("#static-4").on("animationend oAnimationEnd animationend webkitAnimationEnd", 
 		function(e){
 			$(".static-description").animate({"opacity":"1"},1000);
 			$("#start-frame").animate({"opacity":"1"},1000);
 			$(".home-title").animate({"opacity":"1"},1000);
-	//		$(".home-description").css({"opacity":"1"});
 			$(this).off(e);
+			 $('.static-description').click( 
+		   		function() {
+		    	$('.home-description').css({"opacity":"0"});
+		    	$('.static-description').parent().css({"border":"none","border-radius":"0","background-color":"transparent"});
+				$('.col-front-page').removeClass('show');
+
+				var id = $(this).attr('id').replace('static', '');
+				var descId='#description'.concat(id);
+				$(descId).animate({"opacity":"1"},1000);
+				$(this).parent().css({"background-color":"#dcf0ff"});
+				$(this).parent().css({"border":"0px solid #dcf0ff"});
+				$(this).parent().css({"border-radius":"0.5em"});
+				$(this).parent().toggleClass('show');
+	//    	$('.static-description').css({"border":"none","border-radius":"0"});
+	//    	$(this).css({"border":"11px solid orange","border-radius":"0.5em"});	
+	//    	$(this).siblings('.home-description').animate({"opacity":"1"},1000);
+		
+		    });
 		});
+
+	//TODO En movile desactivar esto porque se ve mal
+	$(function() {
+	    $(window).scroll( function(){
+	        $('.fadeInBlock').each( function(i){
+	            
+	            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            
+	            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+	            bottom_of_window = bottom_of_window + 300;  
+	          
+	            if( bottom_of_window > bottom_of_object ){
+	                
+	                $(this).animate({'opacity':'1'},700);
+	                    
+	            }
+        	}); 
+	    });
+	});
+
+   
+
+
+
 </script>
