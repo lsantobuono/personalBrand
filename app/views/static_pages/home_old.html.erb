@@ -1,0 +1,398 @@
+<% provide(:title, 'Desarrollo Web | BunDev ') %>
+
+	<!--<div class="horizontal-arrow left-arrow"><div style="position: relative; top: -50%;"> 
+		< 
+	</div></div>
+	<div class="horizontal-arrow right-arrow"><div style="position: relative; top: -50%;"> 
+		>
+	</div></div> -->
+
+<div class='background-page' id="background-home"  >
+¡Bienvenido a BunDev!
+Somos dos desarrolladores web Freelance radicados en Argentina y España.
+
+<button class="btn btn-primary boton-naranja" id="start-button" >
+Conocenos
+</button>
+</div>
+
+
+<div class='background-page' id="background-first-panel"  >
+
+	<div class="content-container"  style="background-color: $light-grey; color:black; ">
+
+		<div class="moving-text" id="moving-1"> <div style="position: relative; left: -50%;">
+				Diseño Web
+		</div>	</div>
+		<div class="moving-text" id="moving-2"> <div style="position: relative; left: -50%;">
+				Desarrollo de Aplicaciones Web
+		</div>	</div>
+		<div class="moving-text" id="moving-3"> <div style="position: relative; left: -50%;">
+				Sitios Web Mobile
+		</div>	</div>
+		<div class="moving-text" id="moving-4"> <div style="position: relative; left: -50%;">
+				Tiendas Online
+		</div>	</div>
+		
+
+
+		<div class="row front-page-row text-center" >
+			<div class="col-md-3 col-sm-6 col-front-page" >
+				<div class="static-description" id="static-1">
+					<%= image_tag ("web-design.png"), class:"front-page-image" %>
+					<p class="home-title" > Diseño Web </p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-front-page" >
+				<div class="static-description " id="static-2">
+					<%= image_tag ("web-developping.jpg"), class:"front-page-image" %>
+					<p class="home-title"> Desarrollo  de Aplicaciones Web </p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-front-page" >
+				<div class="static-description" id="static-3">
+					<%= image_tag ("web-mobile.jpg"), class:"front-page-image" %>
+					<p class="home-title"> Sitios Web Mobile </p>
+				</div>
+			</div>
+			<div class="col-md-3 col-sm-6 col-front-page" >
+				<div class="static-description " id="static-4">
+					<%= image_tag ("e-commerce.png"), class:"front-page-image" %>
+					<p class="home-title"> Tiendas Online </p>
+				</div>
+			</div>
+		</div>
+
+		<div class="row"  style="height:4em;">
+			<div class="col-md-12 text-center" >
+					<p class="home-description" id="description-1">Diseñamos una Web a tu medida basandonos en tus requerimientos y aplicando todo nuestro conocimiento</p>
+					<p class="home-description" id="description-2">Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
+					<p class="home-description" id="description-3">Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
+					<p class="home-description" id="description-4">Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-md-12 text-center" >
+						<div id="start-frame" style="opacity:0">
+					<h2 style="font-style: italic">¡Bienvenido!</h2>
+					<h1> DESARROLLO WEB </h1>
+					<h3> Pipa y Mono </h3>
+					<button class="btn btn-primary boton-naranja" id="start-button" >
+						Conocenos
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class='background-page' id="welcome-page" style ="background-color: orange; color:white;">
+	<div class="content-container fadeInBlock" id="content-container-2" style="position:relative; top:20%;">
+		<div class="row">
+			<div class="col-md-6 col-sm-12">
+				<div class="preview-text"> Bienvenido a Brand, somos expertos en</div>
+				<h1>Diseño Web .</h1>
+				<p style="font-style: italic;">
+					Somos dos programadores freelance dedicados al diseño y creacioń de sitios Web
+				</p>	
+				<p>Ofrecemos un primer contacto gratuito para discutir en detalle el proyecto y el presupuesto propuesto.</p>
+				<p>	Nos encargamos del diseño y desarrollo del sitio web, escuchando sus ideas e implementando el diseño que quiere y se imagina.</p>Podemos ayudarte con el diseño de tu nueva página web o tienda online. Diseñaremos y desarrollaremos una página web moderna, atractiva y efectiva que te ayudará a diferenciarte de tu competencia, generar confianza y vender más.</p>	
+				<p>	Una vez finalizado el desarrollo ofrecemos servicio de hosting, y soporte gratuito por un mes. También ofrecemos 
+					soporte a largo término por un bajo costo.
+				</p>
+			<!--<div class="text-center">
+				<%= image_tag ("arrow-bottom.png"), class:"arrow-button", id:"arrow-button-2" %>
+			</div>-->
+			<button type="button" class="btn btn-warning boton-negro" id="portfolio-button">Portfolio</button>
+			<button type="button" class="btn btn-warning boton-negro" id="contact-button">Contactanos</button>
+
+			</div>
+			<div class="col-md-6 col-sm-12">
+				<%= image_tag ("laptop-design.png"), style:"width:90%;" %>
+			</div>
+		</div>
+	</div>
+</div>
+<div class='background-page' id="portfolio-page" style ="background-color: $light-grey; color:black;">
+	<div class="content-container fadeInBlock">
+		<h1 style="text-align:center;"> Portfolio </h1>
+		<p> Algunos de nuestros trabajos </p>
+		<ul class="portfolio-list">
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-1.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-2.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-3.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-4.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-5.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+			<li>
+				<div class="preview-portfolio">
+					<%= image_tag ("preview-6.jpg"), class:"picture" %>
+					<div class="content"> 
+						<h4> Diseño Web Nice </h4>
+						<%= truncate("Donec aliquam eget magna quis convallis. In nec rhoncus ex. Duis libero purus, tincidunt ac commodo ac, vulputate at est. Nunc convallis sit amet lacinia varius. ", length:75) %>
+					</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+</div>
+
+
+
+<div class='background-page' style ="background-color: orange; color:white;">
+	<div class="content-container fadeInBlock">
+	<h1> Herramientas </h1>
+	<p style="font-style: italic"> Algunas de las herramientas que usamos en nuestros desarrollos </p>
+		<div class="row" style="margin-top: 2em;">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<%= image_tag "rails.png", class: "tooltip-icon" %>
+				<div style="font-size: 0.8em;" >
+		        	<p style="font-weight: bold;"> Ruby on Rails </p>
+		        	<p> También conocido como RoR o Rails, es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma del patrón Modelo Vista Controlador (MVC).</p>
+	        	</div>
+			</div>
+			<div class="col-md-3">
+				<%= image_tag "html5css3.png", class: "tooltip-icon", style: "width:15em"%>
+	        	<div style="font-size: 0.8em;" >
+		        	<p style="font-weight: bold;"> Html5 + Css3 </p>
+		        	<p> Las últimas versiones de las herrramientas más comunes en el desarrollo web moderno.</p>
+	        	</div>
+			</div>
+			<div class="col-md-3"></div>
+		</div>	
+	</div>
+</div>
+
+<div class='background-page' id="background-desk" style="text-align: center;" >
+	<div class="fadeInBlock" style="position:relative; line-height: normal; display:inline-block; top:-60px">
+		<span class="panel-moving-text" id="panel-moving-1">  
+			<div class="panel-moving-inside">
+				RESPONSIVE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-2">
+			<div class="panel-moving-inside">
+				E-COMMERCE
+			</div>
+		</span> 
+		<span class="panel-moving-text" id="panel-moving-3"> 
+			<div class="panel-moving-inside">
+				DISEÑO WEB
+			</div>
+		</span> 
+	</div>
+</div>
+
+<div class='background-page' style ="background-color: $light-grey; color:black;">
+	<div class="content-container fadeInBlock">
+		<h1> Conectate </h1>
+		<p> Mantenete en contácto con nuestras redes sociales </p>
+		<div class="row" style="margin-top: 2em;">
+			<div class="col-md-3"></div>
+			<div class="col-md-3">
+				<a href="#">
+					<div class="circular-link">
+		             	<i class='fa fa-facebook' aria-hidden='true'></i>
+		            </div>
+	        	</a>
+	        	<p style="font-size: 0.8em; color:black; "> FACEBOOK </p>
+			</div>
+			<div class="col-md-3">
+				<a href="#">
+					<div  class="circular-link">
+              			<i class='fa fa-twitter' aria-hidden='true'></i>
+              		</div>
+    		   	</a>
+	        	<p style="font-size: 0.8em; color:black; "> TWITTER </p>
+			</div>
+			<div class="col-md-3"></div>
+		</div>	
+	</div>
+</div>
+<div class='background-page' id="contact-page" style ="background-color: $light-grey; color:black; padding-top:0;">
+	<div class="video-container fadeInBlock">
+		<div class="video-display">
+			<video playsinline autoplay muted loop id="bgvid" style="width:100%; height:100%">
+			    <source src=<%= video_path "background.mp4" %> type="video/mp4">
+			</video>
+		</div>
+			<div class="content-container video-content">
+				<h2> Contactanos </h2>
+				<p> Nos pondremos en contacto a la brevedad </p>
+				<div class="row">
+					<div class="col-md-3 col-sm-12"></div>	
+					<div class="col-md-3 col-sm-12"> 
+						<div class="contact-column" style="text-align: left" > 
+							<h4 style="margin-top:0"> Información de contacto </h4><br>
+							<div style="font-size:0.9em;">
+				            	<i class='fa fa-phone' aria-hidden='true' style="color:	orange"></i> 4444-4444<br>
+				          	  	<i class='fa fa-phone' aria-hidden='true' style="color:orange"></i> 610-617-057<br>
+				          	  	<i class='fa fa-envelope' aria-hidden='true' style="color:orange"></i> info@brand.com<br>
+				          	  	<i class='fa fa-globe' aria-hidden='true' style="color:orange"></i> www.brand.com<br>
+				          	 </div>
+						</div>
+					</div>
+					<div class="col-md-6 col-sm-12">
+						<div class="contact-column" style="color:black;" > 
+							<%= render("contact_form") %>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</div>
+<script type="text/javascript">
+	
+	$('.preview-portfolio').hover( 
+/*		function() {
+	    	$(this).animate({
+	    	    width: this.width*9/10,
+	   		     heigh: this.height*9/10,
+	    })},
+		function() {
+		    $(this).animate({
+		        width: this.width*10/9,
+		        heigh: this.height*10/9,
+	    })}*/
+	    function() {
+	    	$(this).children('.picture').toggleClass("pic-active",true);
+	    	$(this).children('.content').show(500);
+	    },
+	    function() {
+	    	$(this).children('.picture').removeClass("pic-active",true);
+	    	$(this).children('.content').hide(500);
+	    }
+	);
+
+    $("#contact-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#contact-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
+
+    $("#portfolio-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#portfolio-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
+
+    $("#start-button").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#welcome-page").offset().top - 50 //TODO: este 50 es polemico
+      }, 1000);
+  	});
+
+
+/*	$.fn.extend({
+	   qcss: function(css) {
+	      return $(this).queue(function(next) {
+	         $(this).css(css);
+	         next();
+	      });
+	   }
+	});
+
+	$(document).ready( function() {
+		$(".static-description")
+			.delay(20000)
+			.qcss({opacity:"1"})
+		});
+
+$(document).ready(function(){$(".static-description").animate({"opacity":"1"},1000);
+			$("#start-frame").animate({"opacity":"1"},1000);
+			$(".home-title").animate({"opacity":"1"},1000);});
+
+*/
+
+
+	$("#static-4").on("animationend oAnimationEnd animationend webkitAnimationEnd", 
+		function(e){
+			$(".static-description").animate({"opacity":"1"},1000);
+			$("#start-frame").animate({"opacity":"1"},1000);
+			$(".home-title").animate({"opacity":"1"},1000);
+			$(this).off(e);
+			 $('.static-description').click( 
+		   		function() {
+		    	$('.home-description').css({"opacity":"0"});
+		    	$('.static-description').parent().css({"border":"none","border-radius":"0","background-color":"transparent"});
+				$('.col-front-page').removeClass('show');
+
+				var id = $(this).attr('id').replace('static', '');
+				var descId='#description'.concat(id);
+				$(descId).animate({"opacity":"1"},1000);
+				$(this).parent().css({"background-color":"#dcf0ff"});
+				$(this).parent().css({"border":"0px solid #dcf0ff"});
+				$(this).parent().css({"border-radius":"0.5em"});
+				$(this).parent().toggleClass('show');
+	//    	$('.static-description').css({"border":"none","border-radius":"0"});
+	//    	$(this).css({"border":"11px solid orange","border-radius":"0.5em"});	
+	//    	$(this).siblings('.home-description').animate({"opacity":"1"},1000);
+		
+		    });
+		});
+
+	//TODO En movile desactivar esto porque se ve mal
+	$(function() {
+	    $(window).scroll( function(){
+	        $('.fadeInBlock').each( function(i){
+	            
+	            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+	            var bottom_of_window = $(window).scrollTop() + $(window).height();
+	            
+	            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+	            bottom_of_window = bottom_of_window + 300;  
+	          
+	            if( bottom_of_window > bottom_of_object ){
+	                
+	                $(this).animate({'opacity':'1'},700);
+	                    
+	            }
+        	}); 
+	    });
+	});
+
+   
+
+
+
+</script>

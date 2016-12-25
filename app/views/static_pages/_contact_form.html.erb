@@ -1,25 +1,31 @@
+
 <%= form_for @message do |f| %>
 
   <%= render 'shared/error_messages', object: f.object %>
 
-  <div class="row">
-    <div class="col-md-6" style="padding-left: 0">
-      <div class="field">
-        <%= f.text_field :name, class: "text-input", placeholder:"Nombre" %>
-      </div>
-      <br>
-      <div class="field">
-        <%= f.email_field :email, class: "text-input", placeholder:"Email" %>
-      </div>
+<div class="row row-contact">
+  <div class="col-md-6">
+    <div class="field">
+      <%= f.text_field :name , placeholder: "Nombre" %>
     </div>
-    <div class="col-md-6" style="padding-left: 0">
-      <div class="field">
-        <%= f.text_area :content, class: "text-input", placeholder:"Mensaje", size: "15x4" %>
-      </div>
+  </div>
+  <div class="col-md-6">
+    <div class="field">
+      <%= f.email_field :email , placeholder: "Email" %>
     </div>
-  </div><br>
-  <div class="actions text-left left-text" >
-    <%= f.submit 'Enviar', class: 'btn btn-primary', id: 'submit-contact', style: "background-color: orange" %>
+  </div>
+</div>
+
+<div class="row row-contact">
+  <div class="col-md-12">
+    <div class="field">
+      <%= f.text_area :content , placeholder: "Mensaje" %>
+    </div>
+  </div>
+</div>
+
+  <div class="actions">
+    <%= f.submit 'Enviar', class: 'btn btn-primary contact-button', id: 'submit-contact' %>
   </div>
 <% end %>
 
@@ -27,6 +33,7 @@
 $(document).ready(function () {
   $('#message_name').val('');
   $('#message_email').val('');
-  $('#message_content').val('');
+  $('#message_tel').val('');
+//  $('#message_content').val('');
 });
 </script>

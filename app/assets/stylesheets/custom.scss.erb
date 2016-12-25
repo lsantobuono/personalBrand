@@ -9,50 +9,51 @@ $light-grey: #f2f2f2;
 
 $panel-grey: #8585ad;
 
+$main-blue: #0099ff;
+
 .navbar {
-	height:4em;
 	margin-bottom: 0;
-	background-color: black;
-	border-color: black;
-	opacity:0.6;
-	font-size: 0.9em;
+	background: rgba(255, 255, 255,0.9);
+	border-color: transparent;
+	font-size: 1em;
+  border-bottom: 1px solid gray;
 	.navbar-collapse {
 		ul {
 			li {
 				&:hover {
 					background-color: white;
-					color:orange;
+					color:$main-blue;
 				}	
 				a {
 					 &:link {
-						color:orange;
+						color:$main-blue;
 				    }
 				    /* visited link */
 				    &:visited {
-						color:orange;
+						color:$main-blue;
 				    }
 				    /* mouse over link */
 				    &:hover {
-						color:orange;
+						color:$main-blue;
 				    }
 
 					padding-left:2em !important;
 					padding-right:2em !important;
-					color:orange;
+					color:$main-blue;
 				}
 			}
 		}
 	}
 }
 
-html,body { //TODO no dejar scrollear horizontal
+html,body { 
     max-width: 100%;
     overflow-x: hidden;
 }
 
 body {
-	color: white;
-	background-color:$light-grey;
+	color: black;
+	background-color:white;
 	font-family: "Whitney SSm A","Whitney SSm B",sans-serif;
 }
 
@@ -60,14 +61,6 @@ body {
 	text-align: center;
 	margin-left: 1em;
 	margin-right: 1em;
-}
-
-
-
-.background-page {
-    background-size:cover;
-    padding-top:2em;
-    padding-bottom: 2em;
 }
 
 
@@ -79,8 +72,55 @@ body {
 	}
 }
 
+section {
+  padding-top: 2em;
+  padding-bottom: 2em;
+}
 
+#welcome {
+  height:100vh;
+  background: url(<%= asset_path 'background-home.jpg' %>) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-color: white;
+  color: $main-blue;
 
+}
+
+#about {
+  margin-top:2em; //Sin esto la navbar bardea
+  background-color: white;
+}
+
+#tools {
+  color: white;
+  background-color: $main-blue;
+  margin:0 -100%; /* old browsers fallback */
+  margin:0 calc(50% - 50vw);
+
+}
+
+//wat do
+
+.nav-tabs {
+  margin-top: 1em;
+  li {
+    float:none;
+    display:inline-block;
+    *display:inline; /* ie7 fix */
+    zoom:1; /* hasLayout ie7 trigger */
+    a {
+      color:$main-blue;
+
+    }
+  }
+}
+
+.tab-pane {
+  padding-top:1em;
+}
 
 .arrow-button {
 	height:3em;
@@ -129,20 +169,6 @@ body {
 {
 	font-size: 1em;
 	color:$dark-grey;
-}
-
-.home-title {
-	opacity: 0;
-}
-
-.home-description {
-	opacity:0;
-	background-color: #dcf0ff;
-	color:orange;
-	padding:1em;
-	width:90%;
-	text-align: center;
-	position:absolute;
 }
 
 
@@ -245,9 +271,41 @@ a:hover .circular-link{
 	color:black;
 }
 
-.contact-column {
-	 padding:1em; 
+
+// contact
+
+#contacto {
+  background-color: $light-grey;
 }
+
+.fa {
+  color:$main-blue;
+}
+.row-contact {
+  margin-bottom: 2em;
+}
+
+input,textarea {
+  background-color:   #fff;
+  border: 1px solid $light-grey;
+  padding: 15px 20px;
+  width:100%;
+  &:hover {
+    background-color:#fbfafb;
+  }
+}
+
+
+.form-label {
+  font-size:1em;
+  color: $dark-grey;
+  padding-bottom: 1em;
+}
+
+.contact-button {
+
+}
+
 
 .boton-negro {
 	background-color: black;
@@ -261,7 +319,8 @@ a:hover .circular-link{
 }
 
 .boton-negro:hover, .boton-negro:active, .boton-negro:focus {
-	background-color: black !important; 
+	background-color: transparent !important; 
+  color:black;
 }
 
 
@@ -281,23 +340,25 @@ a:hover .circular-link{
 	background-color: orange !important; 
 }
 
-
-.front-page-row {
-	 font-size:0.9em; 
-	 margin-top:6em; 
-	 padding: 2em 0;
+.btn-primary {
+  background-color: $main-blue;
+  border-color: $main-blue;
+  padding-left:2em;
+  padding-right: 2em;
+  padding-top:1em;
+  padding-bottom:1em;
+  margin-left: 1em;
+  font-size:0.9em;
+  cursor:pointer;
 }
 
-.front-page-image {
-	display:block;
-	width:90%;
-	border-radius: 0.5em;
-	box-shadow: 1em 1em .5em -.5em rgba(0, 0, 0, 0.3);
-    margin-bottom: 1em;
-    height:10em;
-    margin-left: auto;
-    margin-right: auto;
+
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+  background-color: transparent;
+  border-color: gray;
+  color: black;
 }
+
 /* full page vid
 video#bgvid { 
     position: absolute;
@@ -358,6 +419,7 @@ video {
 .tooltip-icon {
 	width:10em;
 	height:10em;
+  margin-bottom: 10px;
 }
 
 #background-desk {
@@ -377,9 +439,4 @@ video {
   	o-background-size: cover;
   	background-size:cover;
 }
-
-.fadeInBlock {
-    opacity:0;
-}
-
 
