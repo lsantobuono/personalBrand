@@ -2,14 +2,13 @@
 
 
 <section id="welcome">
-  <div class='text-center' >
+  <div class='text-left' >
 
-    <div class="container" style="padding-top:10em;">
-      <h1 >¡Bienvenido a BunDev!</h1> 
+    <div class="container-home">
+      <h2 >¡Bienvenido a <b>BunDev!</b></h2> 
 
-      <h1>Desarrollo Web a tu medida</h1>
+      <h2>Desarrollo Web a tu medida</h2>
 
-      <p> Somos dos desarrolladores web Freelance radicados en Argentina y España. </p>
       <button class="btn btn-primary " id="about-button" >
         Conocenos
       </button>
@@ -31,34 +30,84 @@
     </div>
     <div id="navbar3" class="navbar-collapse collapse">
       <ul class="nav navbar-nav navbar-left">
-        <li><a href="#">Inicio</a></li>
+        <li><a href="#" id="home-link">Inicio</a></li>
         <li><a href="#" id="about-link">Nosotros</a></li>  
         <li><a href="#" id="portfolio-link">Portfolio</a></li>  
-        <li><a href="#" id="contact-link">Contactanos</a></li>  
       </ul>
     </div>
   </div>
 </nav>
 
+<div class="fixed-contact-button" data-toggle="modal" data-target=".bs-example-modal-lg">
+  <i class="fa fa-envelope-o" aria-hidden="true" style="color:white"></i>
+</div>
+
+
+
+<div class="modal bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="contact-modal" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <%= render "contact_modal" %>
+    </div>
+  </div>
+</div>
+
+
 <section id="about">
   <div class='text-center container'>
     <div class="row">
-  <!--          <p style=" font-style: italic;">
-              Somos dos programadores freelance dedicados al diseño y creacioń de sitios Web
-           Ofrecemos un primer contacto gratuito para discutir en detalle el proyecto y el presupuesto propuesto.
-             Nos encargamos del diseño y desarrollo del sitio web, escuchando sus ideas e implementando el diseño que quiere y se imagina.Podemos ayudarte con el diseño de tu nueva página web o tienda online. Diseñaremos y desarrollaremos una página web moderna, atractiva y efectiva que te ayudará a diferenciarte de tu competencia, generar confianza y vender más. 
-            Una vez finalizado el desarrollo ofrecemos servicio de hosting, y soporte gratuito por un mes. También ofrecemos 
-              soporte a largo término por un bajo costo.
-            </p>-->
         
-      <h1> ¿Quienes somos? </h1>
+      <div class="title-separator" >
+        <span class="title-span" >
+          QUIENES SOMOS
+        </span>
+      </div>
+      <p>Somos dos amigos Argentinos, recibidos en la Universidad Tecnológica de Buenos Aires hace unos años.
+       Actualmente dedicados al desarrollo de Sitios Web.</p>
 
-      <h1> ¿Que hacemos? </h1>
+      <div class="col-md-offset-2 col-md-3">
+        <div class="circular-img img-lucho"> 
+        </div>
+        Monardo
+      </div>
+
+      <div class="col-md-offset-1 col-md-3 ">
+        <div class="circular-img img-martin"> 
+        </div>
+        Pipa
+      </div>
+    </div>
+      
+    <div class="title-separator" >
+      <span class="title-span" >
+        QUE HACEMOS
+      </span>
     </div>
   </div>
    
+  <div class="row" style="margin-top: 2em;">
+    <div class="col-md-2 col-md-offset-3 col-todo text-center "> 
+      <div class="circular-link "> <i class="fa fa-briefcase" style="color:black; font-size: 0.8em" aria-hidden="true"></i> </div>
+      <h3> Desarrollo Backend </h3>
+      <p> Nuestra especialidad.
+        Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
+    </div>
+    <div class="col-md-2 col-todo text-center">
+      <div class="circular-link "><i class="fa fa-paint-brush" style="color:black; font-size: 0.8em" aria-hidden="true"></i> </div>
+      <h3> Desarrollo Front-End </h3>
+      <p> Si bien no podemos decir que el diseño sea nuestra especialidad, podemos adaptarnos al que propongas y programarlo de forma que se adapte a cualquier dispositivo.</p>
+    </div>
+    <div class="col-md-2 col-todo text-center"> 
+      <div class="circular-link "><i class="fa fa-shopping-cart" style="color:black; font-size: 0.8em" aria-hidden="true"></i> </div>
+      <h3> Tiendas Virtuales </h3>
+      <p> Desarrollamos tu e-commerce de cero con todas tus preferencias. Permití a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
+    </div>
+  </div>
+</section>
+
+<!--
       <ul class="nav nav-tabs text-center" >
-        <li><a href="#menu1" data-toggle="tab" >Desarrollo Backend </a></li>
+        <li class="active"><a href="#menu1" data-toggle="tab" >Desarrollo Backend </a></li>
         <li><a href="#menu2" data-toggle="tab" >Desarrollo Front-End</a></li>
         <li><a href="#menu3" data-toggle="tab" >Tiendas Online</a></li>
       </ul>
@@ -69,45 +118,53 @@
             Desarrollamos desde landing-pages estáticas hasta webs altamente funcionales.</p>
           </div>
           <div id="menu2" class="tab-pane ">
-            <p> Nuestros diseños Responsive permiten el acceso tanto por métodos convencionales como desde celulares. Desde 2014 que el tráfico Web por celulares superó al de ordenadores.</p>
+            <p> Si bien no podemos decir que el diseño sea nuestra especialidad, podemos adaptarnos al que propongas y programarlo.</p>
           </div>
           <div id="menu3" class="tab-pane ">
             <p> Desarrollamos tu e-commerce de cero. Permitiendo a tus clientes ver tu catálogo online y realizar sus compras desde la web. </p>
           </div>
         </div>
       </div>
-
-</section>
+-->
 
 <section id="tools">
   <div class='text-center' >
     <div class="row" style="margin-top: 2em;">
-      <h1> ¿Con que trabajamos? </h1>
-      <p style="font-style: italic"> Algunas de las herramientas que usamos en nuestros desarrollos </p>
-      <div class="col-md-3"></div>
-      <div class="col-md-3">
+      <div class="title-separator" >
+        <span class="title-span" >
+          LAS HERRAMIENTAS QUE USAMOS
+        </span>
+      </div> 
+      <div class="col-md-2 col-sm-0"></div>
+
+      <div class="col-md-4 col-sm-6">
+        <%= image_tag "css_html.png", class: "tooltip-icon", style: "width:100%"%>
+        <div class="center-block" style="font-size: 0.8em; width: 80%"  >
+          <p style="font-weight: bold;"> Html5 + Css3 + JQuery + Bootstrap</p>
+          <p> Las últimas versiones de las herrramientas más comunes en el desarrollo web frontend moderno, la funcionalidad del lado del navegador y la estética de los sitios nunca fue tan importante como ahora.</p>
+        </div>
+      </div> 
+      
+      <div class="col-md-4 col-sm-6">
         <%= image_tag "rails.png", class: "tooltip-icon" %>
-        <div style="font-size: 0.8em;" >
-          <p style="font-weight: bold;"> Ruby on Rails </p>
-          <p> También conocido como RoR o Rails, es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma del patrón Modelo Vista Controlador (MVC).</p>
+        <div class="center-block"  style="font-size: 0.8em;  width: 80%" >
+          <p style="font-weight: bold; "> Ruby on Rails </p>
+          <p> También conocido como RoR o Rails, es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma del patrón Modelo Vista Controlador (<a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador" target="_blank" >MVC</a>).</p>
         </div>
       </div>
-      <div class="col-md-3">
-        <%= image_tag "html5css3.png", class: "tooltip-icon", style: "width:15em"%>
-        <div style="font-size: 0.8em;" >
-          <p style="font-weight: bold;"> Html5 + Css3 </p>
-          <p> Las últimas versiones de las herrramientas más comunes en el desarrollo web moderno.</p>
-        </div>
-      </div>
-      <div class="col-md-3"></div>
+
+      <div class="col-md-2 col-sm-0 "></div>
     </div>  
   </div>
 </section>
 
 <section id="portfolio">
   <div class='text-center'  >
-    <h1> ¿Que sitios hicimos? </h1>
-    <p> Algunos de nuestros trabajos </p>
+      <div class="title-separator" >
+        <span class="title-span" >
+          ALGUNOS DE NUESTROS DESARROLLOS
+        </span>
+      </div> 
     <ul class="portfolio-list">
       <li>
         <div class="preview-portfolio">
@@ -131,32 +188,16 @@
   </div>
 </section>
 
-<section id="contacto">
-  <div class='text-center' >
-    <h2> Contactanos </h2>
-    <p> </p>
-    <div class="row">
-      <div class="col-md-3 col-sm-0"></div>  
-      <div class="col-md-3 col-sm-12"> 
-        <h4 style="margin-top:0"> Información de contacto </h4><br>
-        <div style="font-size:0.9em;">
-          <i class='fa fa-phone' aria-hidden='true' ></i> 4444-4444<br>
-          <i class='fa fa-phone' aria-hidden='true' ></i> 610-617-057<br>
-          <i class='fa fa-envelope' aria-hidden='true' ></i> info@bundev.com.ar<br>
-          <i class='fa fa-globe' aria-hidden='true' ></i><a href="http://www.bundev.com.ar"> www.bundev.com.ar</a> <br>
-        </div>
-      </div>
-      <div class="col-md-3 col-sm-12">
-        <div class="contact-column" style="color:black;" > 
-          <%= render("contact_form") %>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
 
 <script>
 
+
+
+    $("#home-link").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#welcome").offset().top - 50 
+      }, 1000);
+    });
 
     $("#about-link").click( function() {
       $('html, body').animate({
@@ -170,18 +211,20 @@
       }, 1000);
     });
 
-    $("#contact-link").click( function() {
-      $('html, body').animate({
-          scrollTop: $("#contacto").offset().top - 50 
-      }, 1000);
-    });
 
 
 
 </script>
 
 <script type="text/javascript">
-  
+
+
+  $(document).ready(function () {
+    $('.fixed-contact-button').click(function () {
+        $('.bs-example-modal-lg').fadeIn("slow  ");
+    });
+  });
+
   $("#about-button").click( function() {
     $('html, body').animate({
          scrollTop: $("#about").offset().top - 50 //TODO: este 50 es polemico
@@ -189,16 +232,6 @@
   });
 
   $('.preview-portfolio').hover( 
-/*    function() {
-        $(this).animate({
-            width: this.width*9/10,
-             heigh: this.height*9/10,
-      })},
-    function() {
-        $(this).animate({
-            width: this.width*10/9,
-            heigh: this.height*10/9,
-      })}*/
       function() {
         $(this).children('.picture').toggleClass("pic-active",true);
         $(this).children('.content').show(500);

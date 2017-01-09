@@ -79,14 +79,45 @@ section {
 
 #welcome {
   height:100vh;
-  background: url(<%= asset_path 'background-home.jpg' %>) no-repeat center center fixed; 
+  background: url(<%= asset_path 'background-pc.jpg' %>) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
   background-color: white;
-  color: $main-blue;
+  color: white;
+  .container-home {
+    margin-left:13em;
+    margin-top:13em;
+    display:inline-block;
+    padding:1em 2em;
+    background-color: rgba(166, 166, 166,0.5);
+    .btn {
+      margin-top:1em;
+    }
+  }
+}
 
+.circular-img {
+  text-align: center;
+  height:300px;
+  width:300px;
+  margin: 0 auto 20px auto;
+  border-radius: 50%;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:  50%;   
+
+}
+
+
+.img-lucho {
+  background: url(<%= asset_path 'Lucho.jpg' %>) no-repeat  ; 
+  background-size: 300px auto;
+}
+
+.img-martin {
+  background: url(<%= asset_path 'pipa.jpg' %>) no-repeat  ; 
+  background-size: 400px 300px;
 }
 
 #about {
@@ -94,14 +125,64 @@ section {
   background-color: white;
 }
 
-#tools {
-  color: white;
-  background-color: $main-blue;
-  margin:0 -100%; /* old browsers fallback */
-  margin:0 calc(50% - 50vw);
+
+// Modal y boton contact
+
+.modal.fade:not(.in) .modal-dialog {
+    -webkit-transform: translate3d(25%, 0, 0);
+    transform: translate3d(25%, 0, 0);
 
 }
 
+
+
+.modal.in .modal-dialog {
+    width: 30em;
+    max-width: 100%;
+    position:fixed;
+    height:100%;
+    max-height: 100%;
+    right:0px;
+    margin:0px;
+}
+
+.modal-content {
+  height: 100%;
+  max-height: 100%;
+  section { 
+    padding: 2em;
+    height: 100%;
+    max-height: 100%;
+  }
+  .field {
+    margin: 1em 0;
+  }
+
+  textarea {
+    resize: none;
+    height:100px;
+  }
+}
+
+
+
+
+
+
+.fixed-contact-button {
+  position:fixed;
+  background-color: $main-blue;
+  font-size: 2em;
+  padding:0.5em ;
+  right:0px;
+  top:50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $dark-grey;
+    color: white;
+  }
+}
 //wat do
 
 .nav-tabs {
@@ -171,6 +252,100 @@ section {
 	color:$dark-grey;
 }
 
+.col-todo {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  height:21em;
+  background-color: grey;
+  color: #4b5c66;
+  background: #f4f5f7;
+  margin-right: 1em;
+
+  p {
+    font-size: 0.9em;
+    color: #909aa0;
+  }
+
+  &:hover {
+
+    background-color: #404040;
+    color: white;
+    p {
+      animation-name: slide-down;
+      animation-duration: 0.4s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      -webkit-animation-fill-mode: forwards;
+      color: #aeb4bb;
+    }
+    h3, .circular-link {
+      animation-name: slide-up;
+      animation-duration: 0.4s;
+      animation-iteration-count: 1;
+      animation-timing-function: linear;
+      -webkit-animation-fill-mode: forwards;      
+    }
+  }
+
+}
+
+@keyframes slide-down {
+  from {
+    transform:  translatey(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translatey(0%);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+}
+
+@keyframes slide-up {
+  from {
+    transform:  translatey(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translatey(0%);
+    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+}
+
+.title-separator {
+  width: 100%;
+  height: 12px;
+  border-bottom: 4px solid #F3F5F6; 
+  text-align: center; 
+  margin-top: 2em;
+  margin-bottom:3em;
+  .title-span {
+    font-size: 12px; 
+    color: #aeb4bb; 
+    background-color: white; 
+    padding: 0 20px;
+    letter-spacing: .1em;
+  }
+}
+
+.circular-link {
+  text-align: center;
+  height:100px;
+  width:100px;
+  margin: 0 auto 20px auto;
+  font-size:5em;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-border-radius:  50%;
+  -moz-border-radius:  50%;   
+  color:black;
+}
+
+.cart-img {
+  background: url(<%= asset_path 'cart.png' %>) no-repeat center center ; 
+  background-size: 80px 80px;
+}
 
 h1 {
   font-size: 5em;   
@@ -302,9 +477,6 @@ input,textarea {
   padding-bottom: 1em;
 }
 
-.contact-button {
-
-}
 
 
 .boton-negro {
@@ -347,7 +519,6 @@ input,textarea {
   padding-right: 2em;
   padding-top:1em;
   padding-bottom:1em;
-  margin-left: 1em;
   font-size:0.9em;
   cursor:pointer;
 }

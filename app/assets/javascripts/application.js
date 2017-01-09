@@ -12,7 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require jquery-ui/dialog
 //= require bootstrap-sprockets
 //= require jquery.fullPage
 //= require_tree .

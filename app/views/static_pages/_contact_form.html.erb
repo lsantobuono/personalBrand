@@ -3,29 +3,18 @@
 
   <%= render 'shared/error_messages', object: f.object %>
 
-<div class="row row-contact">
-  <div class="col-md-6">
     <div class="field">
-      <%= f.text_field :name , placeholder: "Nombre" %>
+      <%= f.text_field :name , placeholder: "Tu Nombre*" %>
     </div>
-  </div>
-  <div class="col-md-6">
     <div class="field">
-      <%= f.email_field :email , placeholder: "Email" %>
+      <%= f.email_field :email , placeholder: "Tu Email*" %>
     </div>
-  </div>
-</div>
-
-<div class="row row-contact">
-  <div class="col-md-12">
     <div class="field">
-      <%= f.text_area :content , placeholder: "Mensaje" %>
+      <%= f.text_area :content , placeholder: "Tu Mensaje*" %>
     </div>
-  </div>
-</div>
 
   <div class="actions">
-    <%= f.submit 'Enviar', class: 'btn btn-primary contact-button', id: 'submit-contact' %>
+    <%= f.submit 'Enviar', class: 'btn btn-primary ', id: 'submit-contact' %>
   </div>
 <% end %>
 
