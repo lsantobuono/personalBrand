@@ -16,7 +16,6 @@ $main-blue: #0099ff;
 	background: rgba(255, 255, 255,0.9);
 	border-color: transparent;
 	font-size: 1em;
-  border-bottom: 1px solid gray;
 	.navbar-collapse {
 		ul {
 			li {
@@ -35,6 +34,7 @@ $main-blue: #0099ff;
 				    /* mouse over link */
 				    &:hover {
 						color:$main-blue;
+            border-bottom: 2px solid $main-blue;
 				    }
 
 					padding-left:2em !important;
@@ -94,6 +94,7 @@ section {
     background-color: rgba(166, 166, 166,0.5);
     .btn {
       margin-top:1em;
+      padding-bottom: 0;
     }
   }
 }
@@ -169,7 +170,7 @@ section {
 
 .footer {
   padding-top:2em;
-  background-color: #0066ff;
+  background-color: black;
   color:white;
 }
 
@@ -322,7 +323,7 @@ section {
   height: 12px;
   border-bottom: 4px solid #F3F5F6; 
   text-align: center; 
-  margin-top: 2em;
+  margin-top: 1em;
   margin-bottom:3em;
   .title-span {
     font-size: 12px; 
@@ -528,10 +529,9 @@ input,textarea {
 }
 
 
-.btn-primary:hover, .btn-primary:active, .btn-primary:focus {
+.btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
   background-color: transparent;
   border-color: gray;
-  color: black;
 }
 
 /* full page vid
