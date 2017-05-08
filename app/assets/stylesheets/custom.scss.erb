@@ -10,6 +10,7 @@ $light-grey: #f2f2f2;
 $panel-grey: #8585ad;
 
 $main-blue: #0099ff;
+$main-blue-hover: #006bb3;
 
 .navbar {
 	margin-bottom: 0;
@@ -79,7 +80,8 @@ section {
 
 #welcome {
   height:100vh;
-  background: url(<%= asset_path 'background-pc.jpg' %>) no-repeat center center fixed; 
+}
+/*  background: url(<%= asset_path 'background-pc.jpg' %>) no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -97,7 +99,8 @@ section {
       padding-bottom: 0;
     }
   }
-}
+*/
+
 
 .circular-img {
   text-align: center;
@@ -523,17 +526,15 @@ input,textarea {
 .btn-primary {
   background-color: $main-blue;
   border-color: $main-blue;
-  padding-left:2em;
-  padding-right: 2em;
-  padding-top:1em;
-  padding-bottom:1em;
+  padding:0.5em;
+
   font-size:0.9em;
   cursor:pointer;
 }
 
 
 .btn-primary:hover, .btn-primary:active, .btn-primary:focus, .btn-primary:active:focus {
-  background-color: transparent;
+  background-color: $main-blue-hover;
   border-color: gray;
 }
 

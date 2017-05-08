@@ -2,8 +2,7 @@
 
 
 <section id="welcome">
-  <div class='text-left' >
-
+  <!--<div class='text-left' >
     <div class="container-home">
       <h2 >¡Bienvenido a <b>Programando!</b></h2> 
 
@@ -12,6 +11,20 @@
       <button class="btn btn-primary " id="about-button" >
         <p style="font-size:2em">
           <i class="fa fa-angle-double-down" style="color:white;" aria-hidden="true"></i>
+          Conocenos
+        </p>
+      </button>
+    </div>
+  </div>-->
+  <div class="container">    
+    <div class="text-center">
+      <h2 class="loguito">
+        <span class="programando" data-text="programando"></span><span class="guion"></span>
+        &nbsp;
+      </h2>
+      <h3>Desarrollo de software a medida</h3>
+      <button class="btn btn-primary " id="about-button" >
+        <p style="font-size:2em; padding:0; margin:0 ;">
           Conocenos
         </p>
       </button>
@@ -233,7 +246,7 @@
 
   $("#about-button").click( function() {
     $('html, body').animate({
-         scrollTop: $("#about").offset().top - 50 //TODO: este 50 es polemico
+         scrollTop: $("#about").offset().top 
     }, 1000);
   });
 
