@@ -23,7 +23,7 @@
         &nbsp;
       </h2>
       <h3>Desarrollo de software a medida</h3>
-      <button class="btn btn-primary " id="about-button" >
+      <button class="btn btn-primary" id="about-button" style="margin-top:5em;" >
         <p style="font-size:2em; padding:0; margin:0 ;">
           Conocenos
         </p>
@@ -31,7 +31,7 @@
     </div>
   </div>
 </section>
-<!--
+
 <nav id="main-nav" class="navbar navbar-inverse"  >
   <div class="container">
     <div class="navbar-header">
@@ -41,20 +41,21 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="brand" href="/"><img src=<%= image_path "logo.png" %> style="height:50px" alt="logo programando ">
+      <a class="brand" href="/"><img src=<%= image_path "logo-small.png" %> style="height:100px" alt="logo programando ">
       </a>
     </div>
     <div id="navbar3" class="navbar-collapse collapse">
-      <ul class="nav navbar-nav navbar-left">
+      <ul class="nav navbar-nav navbar-right">
         <li><a href="#" id="home-link">Inicio</a></li>
         <li><a href="#" id="about-link">Nosotros</a></li>  
         <li><a href="#" id="portfolio-link">Portfolio</a></li>  
+        <li><a href="#" id="contact-link">Contacto</a></li>  
       </ul>
     </div>
   </div>
 </nav>
---> 
-<div class="fixed-contact-button" data-toggle="modal" data-direction='right' data-target=".connect-modal">
+
+<!--<div class="fixed-contact-button" data-toggle="modal" data-direction='right' data-target=".connect-modal">
   <i class="fa fa-envelope-o" aria-hidden="true" style="color:white"></i>
 </div>
 
@@ -67,7 +68,7 @@
     </div>
   </div>
 </div>
-
+-->
 <!--
 <section id="about">
   <div class='text-center container'>
@@ -155,7 +156,7 @@
 
       <div class="col-md-4 col-sm-6">
         <%= image_tag "css_html.png", class: "tooltip-icon", style: "width:100%"%>
-        <div class="center-block" style="font-size: 0.8em; width: 80%"  >
+        <div class="center-block" style="font-size: 15px; width: 80%"  >
           <p style="font-weight: bold;"> Html5 + Css3 + JQuery + Bootstrap</p>
           <p> Las últimas versiones de las herrramientas más comunes en el desarrollo web frontend moderno, la funcionalidad del lado del navegador y la estética de los sitios nunca fue tan importante como ahora.</p>
         </div>
@@ -163,7 +164,7 @@
       
       <div class="col-md-4 col-sm-6">
         <%= image_tag "rails.png", class: "tooltip-icon" %>
-        <div class="center-block"  style="font-size: 0.8em;  width: 80%" >
+        <div class="center-block"  style="font-size: 15px;  width: 80%" >
           <p style="font-weight: bold; "> Ruby on Rails </p>
           <p> También conocido como RoR o Rails, es un framework de aplicaciones web de código abierto escrito en el lenguaje de programación Ruby, siguiendo el paradigma del patrón Modelo Vista Controlador (<a href="https://es.wikipedia.org/wiki/Modelo%E2%80%93vista%E2%80%93controlador" target="_blank" >MVC</a>).</p>
         </div>
@@ -182,29 +183,96 @@
         </span>
       </div> 
     <ul class="portfolio-list">
-      <li>
+      <a href="http://www.agc.com.ar" target="_blank">
+        <li>
+          <div class="preview-portfolio">
+            <%= image_tag ("agc-preview-1.png"), class:"picture" %>
+            <div class="content"> 
+              <h4> AGC</h4>
+                E-commerce personalizado para esta empresa Argentina de venta de repuestos arcade.
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="http://www.mesler.com.ar" target="_blank">
+        <li>
         <div class="preview-portfolio">
-          <%= image_tag ("agc-preview-1.png"), class:"picture" %>
+          <%= image_tag ("mesler-preview-1.png"), class:"picture" %>
           <div class="content"> 
-            <h4> AGC E-Commerce </h4>
-              E-commerce personalizado para esta empresa Argentina de venta de repuestos arcade.
+            <h4> Mesler Propiedades </h4>
+            <%= truncate("Portal de busqueda y muestra de propiedades .", length:75) %>
+            </div>
           </div>
-        </div>
-      </li>
-      <li>
-      <div class="preview-portfolio">
-        <%= image_tag ("mesler-preview-1.png"), class:"picture" %>
-        <div class="content"> 
-          <h4> Mesler Propiedades </h4>
-          <%= truncate("Portal de busqueda y muestra de propiedades .", length:75) %>
+        </li>
+      </a>
+      <a href="http://www.ariesbi.com" target="_blank">
+        <li>
+        <div class="preview-portfolio">
+          <%= image_tag ("aries-preview.png"), class:"picture" %>
+          <div class="content"> 
+            <h4> Aries BI </h4>
+            <%= truncate("Landing page de empresa de Business Intelligence.", length:75) %>
+            </div>
           </div>
-        </div>
-      </li>
+        </li>
+      </a>
+      <a href="http://www.perval.com.ar" target="_blank">
+        <li>
+        <div class="preview-portfolio">
+          <%= image_tag ("perval-preview.png"), class:"picture" %>
+          <div class="content"> 
+            <h4> Perval </h4>
+            <%= truncate("Landing page de promoción para jabón líquido.", length:75) %>
+            </div>
+          </div>
+        </li>
+      </a>
+      <a href="http://www.santobuono.com.ar" target="_blank">
+        <li>
+        <div class="preview-portfolio">
+          <%= image_tag ("santobuono-preview.png"), class:"picture" %>
+          <div class="content"> 
+            <h4> Santobuono Inmobiliaria </h4>
+            <%= truncate("Portal de busqueda y muestra de propiedades .", length:75) %>
+            </div>
+          </div>
+        </li>
+      </a>
       </ul>
   </div>
 </section>
-
-
+<section id="contact" style="padding-bottom: 0">
+  <div class='background-page' id="contact-page" style ="background-color: $light-grey; color:black; padding-top:4em;">
+    <div class="video-container" style="height:500px">
+      <div class="video-display">
+        <video playsinline autoplay muted loop id="bgvid" style="width:100%; height:100%">
+            <source src=<%= video_path "background.mp4" %> type="video/mp4">
+        </video>
+      </div>
+        <div class="content-container video-content" style="padding-top:20px;">
+          <h2> Contactanos </h2>
+          <!--<p> Nos pondremos en contacto a la brevedad </p> -->
+          <div class="row" style="margin-top: 20px;">
+            <div class="col-md-3 col-sm-12"></div>  
+            <div class="col-md-3 col-sm-12"> 
+              <div class="contact-column" style="text-align: left" > 
+                <div style="font-size:20px;">
+                          <i class='fa fa-phone' aria-hidden='true' style="color:orange"></i> +54 11-3408-3997<br>
+                          <i class='fa fa-envelope' aria-hidden='true' style="color:orange"></i> info@programando.com.ar<br>
+                          <i class='fa fa-globe' aria-hidden='true' style="color:orange"></i> www.programando.com.ar<br>
+                       </div>
+              </div>
+            </div>
+            <div class="col-md-6 col-sm-12">
+              <div class="contact-column" style="color:black;" > 
+                <%= render("contact_form") %>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>                        
+</section>
 <script>
 
 
@@ -227,6 +295,11 @@
       }, 1000);
     });
 
+    $("#contact-link").click( function() {
+      $('html, body').animate({
+          scrollTop: $("#contact").offset().top - 50
+      }, 1000);
+    });
 
 
 
@@ -236,13 +309,13 @@
 
 
   $(document).ready(function () {
-    $('.fixed-contact-button').click(function () {
+   /* $('.fixed-contact-button').click(function () {
       $('.connect-modal')
           .prop('class', 'modal fade connect-modal') // revert to default
           .addClass( $(this).data('direction') );
       $('connect-modal').fadeIn("slow  ");
     });
-  });
+  });*/
 
   $("#about-button").click( function() {
     $('html, body').animate({
@@ -264,21 +337,23 @@
   var limit=-1;
 
   $(window).scroll( function(){
-    if ($("#main-nav")[0].getBoundingClientRect().y <= 0)
+
+
+    if ($("#main-nav")[0].getBoundingClientRect().top <= 0)
     {
       if (limit == -1) limit =  $(window)['scrollTop']();
       $("#main-nav").addClass("navbar-fixed-top");
-      $("#about").css("padding-top","5em");
+      $("#about").css("padding-top","200px");
     }
     if ($(window)['scrollTop']() < limit)
     {
       $("#main-nav").removeClass("navbar-fixed-top");
-      $("#about").css("padding-top","0px");
+      $("#about").css("padding-top","0");
       limit=-1;
     }
   });
 
-
+  });
   //TODO En mobile desactivar esto porque se ve mal
  /*
   $(function() {
@@ -297,9 +372,9 @@
               }
           }); 
       });
-  });
 
-   */
+  */
+   
 
 
 

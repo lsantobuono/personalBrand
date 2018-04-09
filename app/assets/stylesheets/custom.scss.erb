@@ -9,19 +9,20 @@ $light-grey: #f2f2f2;
 
 $panel-grey: #8585ad;
 
-$main-blue: #0099ff;
+$main-blue: #4890c1;
 $main-blue-hover: #006bb3;
 
 .navbar {
 	margin-bottom: 0;
 	background: rgba(255, 255, 255,0.9);
 	border-color: transparent;
-	font-size: 1em;
+	font-size: 20px;
+      vertical-align: middle;
 	.navbar-collapse {
 		ul {
 			li {
 				&:hover {
-					background-color: white;
+					background-color: transparent;
 					color:$main-blue;
 				}	
 				a {
@@ -47,6 +48,11 @@ $main-blue-hover: #006bb3;
 	}
 }
 
+.navbar-nav li a {
+  line-height: 100px;
+  height: 100px;
+}
+  
 html,body { 
     max-width: 100%;
     overflow-x: hidden;
@@ -80,6 +86,8 @@ section {
 
 #welcome {
   height:100vh;
+  font-family: monospace;
+
 }
 /*  background: url(<%= asset_path 'background-pc.jpg' %>) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -101,6 +109,25 @@ section {
   }
 */
 
+.loguito {
+  font-size: 40px;
+  width: 289px;
+  text-align: left;
+  margin-top: 200px;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+@media(max-width: 600px) {
+  .loguito {
+    font-size: 30px;
+    width: 202px;
+    margin-top: 90px;
+  }
+  h3 {
+    font-size: 16px;
+  }
+}
 
 .circular-img {
   text-align: center;
@@ -125,6 +152,7 @@ section {
 }
 
 #about {
+  //padding-top:400px;
   margin-top:2em; //Sin esto la navbar bardea
   background-color: white;
 }
@@ -283,19 +311,19 @@ section {
     background-color: #404040;
     color: white;
     p {
-      animation-name: slide-down;
+      /*animation-name: slide-down;
       animation-duration: 0.4s;
       animation-iteration-count: 1;
       animation-timing-function: linear;
       -webkit-animation-fill-mode: forwards;
-      color: #aeb4bb;
+      color: #aeb4bb;*/
     }
     h3, .circular-link {
-      animation-name: slide-up;
+      /*animation-name: slide-up;
       animation-duration: 0.4s;
       animation-iteration-count: 1;
       animation-timing-function: linear;
-      -webkit-animation-fill-mode: forwards;      
+      -webkit-animation-fill-mode: forwards;  */    
     }
   }
 
@@ -474,6 +502,7 @@ a:hover .circular-link{
 input,textarea {
   background-color:   #fff;
   border: 1px solid $light-grey;
+  margin-bottom: 20px;
   padding: 15px 20px;
   width:100%;
   &:hover {
