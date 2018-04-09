@@ -654,3 +654,90 @@ video {
   }
 
 }
+
+#process {
+
+  .row-triple {
+    padding-left:10em;
+    padding-right:10em;
+    height: 200px;
+  }
+
+  .circular-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 150px;
+    -webkit-border-radius: 150px;
+    -moz-border-radius: 150px;
+    background: url(http://placekitten.com/g/300/300) no-repeat;
+  }
+
+  .vertical-line {
+    height:800px;
+    position:absolute;
+    left:50%;
+    border-left: 1px solid black;
+  }
+
+  h2 {
+    color:#0099ff;
+    font-size:24px;
+  }
+
+  .navbar .navbar-collapse ul li a:link {
+    color: black;
+  }
+  .columna-recuadro {
+    margin-top:2em;
+    border: solid 5px #d8d8d8;
+    padding-bottom: 1em;
+  }
+
+  .columna-recuadro h3 {
+    margin-top:5px;
+    font-size:20px;
+    color:#666666;
+  }
+
+  .columna-recuadro p {
+      font-size:12px;
+      color:grey;
+  }
+
+  .row-triple {
+  }
+
+  .columna-left::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 1em solid #d8d8d8;;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    opacity:1;
+    top: 0px;
+    right:-30px;
+  }
+
+  .columna-right::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border: 1em solid #d8d8d8;;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    opacity:1;
+    top: 0px;
+    left:-30px;
+  }
+
+  .col-subtitle {
+    padding-top:50px;
+  }
+}
